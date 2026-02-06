@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DateSpark — My Plans</title>
+  </head>
+
+  <body>
+    <!-- Skip link -->
+    <a href="#main-content">Skip to content</a>
+
+    <!-- HEADER -->
+    <header>
+      <nav aria-label="Primary">
+        <a href="/generate" aria-current="page">Generate</a>
+        <a href="/plans">My Plans</a>
+        <a href="/browse">Browse</a>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content">
+      <!-- Page heading -->
+      <section aria-labelledby="plans-title">
+        <div>
+          <h1 id="plans-title">My Saved Spark Plans</h1>
+          <p>Curate your journey of connection and romance.</p>
+        </div>
+
+        <!-- Controls row: tabs + search -->
+        <section aria-label="Plans controls">
+          <!-- Tabs (semantic buttons) -->
+          <nav aria-label="Plan status">
+            <button type="button" aria-current="page">
+              Upcoming <span aria-label="3 upcoming plans">(3)</span>
+            </button>
+            <button type="button">
+              Completed <span aria-label="1 completed plan">(1)</span>
+            </button>
+          </nav>
+
+          <!-- Search -->
+          <form aria-label="Search plans" role="search">
+            <label for="plan-search" class="sr-only">Find a specific plan</label>
+            <input
+              id="plan-search"
+              name="q"
+              type="search"
+              placeholder="Find a specific plan..."
+              autocomplete="off"
+            />
+          </form>
+        </section>
+      </section>
+
+      <!-- Plans grid -->
+      <section aria-label="Upcoming plans">
+        <div aria-label="Plans list">
+          <!-- Card 1 -->
+          <article aria-labelledby="plan-1-title">
+            <div>
+              <figure>
+                <img
+                  src=""
+                  alt="Starlit rooftop picnic setting"
+                  width="600"
+                  height="360"
+                />
+              </figure>
+
+              <!-- Card action: delete -->
+              <button type="button" aria-label="Remove Starlit Rooftop Picnic">
+                🗑
+              </button>
+
+              <h2 id="plan-1-title">Starlit Rooftop Picnic</h2>
+
+              <!-- tags -->
+              <p aria-label="Plan tags">
+                <span>Romantic</span>
+                <span>NN</span>
+                <span>3 hrs</span>
+              </p>
+            </div>
+
+            <p>
+              A curated evening with artisanal snacks, plush blankets, and a
+              telescope for star-gazing.
+            </p>
+
+            <!-- Card actions -->
+            <div aria-label="Plan actions">
+              <a href="/plans/starlit-rooftop-picnic">View Details</a>
+              <button type="button">Done</button>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article aria-labelledby="plan-2-title">
+            <div>
+              <figure>
+                <img
+                  src=""
+                  alt="Neon-lit vintage arcade machines"
+                  width="600"
+                  height="360"
+                />
+              </figure>
+
+              <button type="button" aria-label="Remove Vintage Arcade Date">
+                🗑
+              </button>
+
+              <h2 id="plan-2-title">Vintage Arcade Date</h2>
+
+              <p aria-label="Plan tags">
+                <span>Playful</span>
+                <span>N</span>
+                <span>4 hrs</span>
+              </p>
+            </div>
+
+            <p>
+              Connect over nostalgia with classic pinball, neon lights, and
+              shareable milkshakes.
+            </p>
+
+            <div aria-label="Plan actions">
+              <a href="/plans/vintage-arcade-date">View Details</a>
+              <button type="button">Done</button>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article aria-labelledby="plan-3-title">
+            <div>
+              <figure>
+                <img
+                  src=""
+                  alt="Young plants sprouting in a garden bed"
+                  width="600"
+                  height="360"
+                />
+              </figure>
+
+              <button type="button" aria-label="Remove Botanical Garden Walk">
+                🗑
+              </button>
+
+              <h2 id="plan-3-title">Botanical Garden Walk</h2>
+
+              <p aria-label="Plan tags">
+                <span>Serene</span>
+                <span>Free</span>
+                <span>2 hrs</span>
+              </p>
+            </div>
+
+            <p>
+              Quiet time together among rare flora and hidden sculpture paths.
+              Perfect for deep conversations.
+            </p>
+
+            <div aria-label="Plan actions">
+              <a href="/plans/botanical-garden-walk">View Details</a>
+              <button type="button">Done</button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section aria-label="Footer brand">
+        <a href="/" aria-label="DateSpark Home">
+          <span aria-hidden="true">♥</span>
+          <span>DateSpark</span>
+        </a>
+
+        <p>
+          The ultimate destination for couples looking to discover new ways to
+          connect. Ignite the spark and keep the adventure alive.
+        </p>
+      </section>
+
+      <nav aria-label="Footer">
+        <a href="/generate">Generate</a>
+        <a href="/plans" aria-current="page">My Plans</a>
+        <a href="/browse">Browse</a>
+      </nav>
+
+      <small>© 2026 DateSpark. All rights reserved.</small>
+    </footer>
+  </body>
+</html>

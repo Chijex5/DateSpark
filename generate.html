@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DateSpark</title>
+  </head>
+
+  <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content">Skip to content</a>
+
+    <!-- HEADER -->
+    <header>
+      <nav aria-label="Primary">
+        <a href="/generate" aria-current="page">Generate</a>
+        <a href="/plans">My Plans</a>
+        <a href="/browse">Browse</a>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main id="main-content">
+      <!-- HERO / GENERATOR -->
+      <section aria-labelledby="hero-title">
+        <header>
+          <h1 id="hero-title">Ignite Your Next Adventure Together</h1>
+          <p>Personalized date ideas crafted for your unique connection.</p>
+        </header>
+
+        <!-- Generator controls -->
+        <form aria-label="Date idea generator">
+          <fieldset>
+            <legend class="sr-only">Filter your date idea</legend>
+
+            <label for="budget">
+              <span>Budget</span>
+              <select id="budget" name="budget">
+                <option value="">Price Range</option>
+                <option value="low">Low Cost</option>
+                <option value="mid">Mid Range</option>
+                <option value="high">High End</option>
+              </select>
+            </label>
+
+            <label for="activity">
+              <span>Activity</span>
+              <select id="activity" name="activity">
+                <option value="">Outdoor &amp; Cozy</option>
+                <option value="outdoor">Outdoor</option>
+                <option value="cozy">Cozy</option>
+                <option value="indoor">Indoor</option>
+              </select>
+            </label>
+
+            <label for="duration">
+              <span>Duration</span>
+              <select id="duration" name="duration">
+                <option value="">2 - 4 Hours</option>
+                <option value="1-2">1 - 2 Hours</option>
+                <option value="2-4">2 - 4 Hours</option>
+                <option value="4plus">4+ Hours</option>
+              </select>
+            </label>
+
+            <button type="submit">Generate Idea</button>
+          </fieldset>
+        </form>
+      </section>
+
+      <!-- FEATURED GENERATED IDEA CARD -->
+      <section aria-labelledby="featured-idea-title">
+        <article aria-labelledby="featured-idea-title">
+          <!-- Left media -->
+          <figure>
+            <!-- Use an actual image src later -->
+            <img
+              src=""
+              alt="Starry night sky background"
+              width="800"
+              height="600"
+            />
+            <figcaption class="sr-only">Featured date idea image</figcaption>
+          </figure>
+
+          <!-- Right content -->
+          <div>
+            <!-- Tags -->
+            <p aria-label="Idea tags">
+              <span>Low Cost</span>
+              <span>2-4 Hours</span>
+              <span>Outdoor</span>
+            </p>
+
+            <header>
+              <h2 id="featured-idea-title">Starlit Picnic &amp; Astronomy</h2>
+              <p>
+                A romantic evening under the stars. Escape the city lights and
+                find a quiet spot to reconnect with nature and each other.
+                Perfect for creating lasting memories in a peaceful atmosphere.
+              </p>
+            </header>
+
+            <!-- Two-column info blocks -->
+            <section aria-labelledby="essentials-title">
+              <h3 id="essentials-title">Essentials</h3>
+              <p>Cozy blanket &amp; plush pillows</p>
+              <p>Stargazing / constellation app</p>
+              <p>Thermos of warm cocoa</p>
+            </section>
+
+            <aside aria-labelledby="romantic-tip-title">
+              <h3 id="romantic-tip-title">Romantic Tip</h3>
+              <p>
+                A new moon phase provides the darkest skies. Try to go when the
+                moon is less than 25% visible for the most magical view of the
+                Milky Way.
+              </p>
+            </aside>
+
+            <!-- Actions -->
+            <div aria-label="Idea actions">
+              <button type="button">Save to My Plans</button>
+              <button type="button">Try Another Idea</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <!-- INSPIRATION / BROWSE PREVIEW -->
+      <section aria-labelledby="inspiration-title">
+        <header>
+          <h2 id="inspiration-title">Need More Inspiration?</h2>
+          <p>Explore hand-picked dates loved by our community</p>
+
+          <a href="/browse" aria-label="Browse all date ideas">Browse All →</a>
+        </header>
+
+        <!-- Cards grid (use articles for each card) -->
+        <div aria-label="Inspiration ideas">
+          <article aria-label="Art Gallery Hop idea">
+            <figure>
+              <img src="" alt="Art gallery scene" width="400" height="280" />
+            </figure>
+
+            <p aria-label="Idea categories">
+              <span>Indoor</span>
+              <span>Calm</span>
+            </p>
+
+            <h3>Art Gallery Hop</h3>
+            <a href="/browse/art-gallery-hop">View Details</a>
+          </article>
+
+          <article aria-label="Sunset Kayaking idea">
+            <figure>
+              <img
+                src=""
+                alt="Kayaking at sunset on calm water"
+                width="400"
+                height="280"
+              />
+            </figure>
+
+            <p aria-label="Idea categories">
+              <span>Active</span>
+              <span>Outdoor</span>
+            </p>
+
+            <h3>Sunset Kayaking</h3>
+            <a href="/browse/sunset-kayaking">View Details</a>
+          </article>
+
+          <article aria-label="Coffee and Books idea">
+            <figure>
+              <img
+                src=""
+                alt="Coffee cups on a table with books nearby"
+                width="400"
+                height="280"
+              />
+            </figure>
+
+            <p aria-label="Idea categories">
+              <span>Cozy</span>
+              <span>Chill</span>
+            </p>
+
+            <h3>Coffee &amp; Books</h3>
+            <a href="/browse/coffee-and-books">View Details</a>
+          </article>
+
+          <article aria-label="Cooking Night idea">
+            <figure>
+              <img
+                src=""
+                alt="Preparing a meal together in a kitchen"
+                width="400"
+                height="280"
+              />
+            </figure>
+
+            <p aria-label="Idea categories">
+              <span>Food</span>
+              <span>Indoor</span>
+            </p>
+
+            <h3>Cooking Night</h3>
+            <a href="/browse/cooking-night">View Details</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+      <section aria-label="Footer brand">
+        <a href="/" aria-label="DateSpark Home">
+          <span aria-hidden="true">♥</span>
+          <span>DateSpark</span>
+        </a>
+
+        <p>
+          The ultimate destination for couples looking to discover new ways to
+          connect. Ignite the spark and keep the adventure alive.
+        </p>
+      </section>
+
+      <nav aria-label="Footer">
+        <a href="/generate">Generate</a>
+        <a href="/plans">My Plans</a>
+        <a href="/browse">Browse</a>
+      </nav>
+
+      <small>© 2026 DateSpark. All rights reserved.</small>
+    </footer>
+
+    <!-- Optional helper for visually-hidden text (if you add CSS later) -->
+    <!--
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    -->
+  </body>
+</html>

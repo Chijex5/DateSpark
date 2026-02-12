@@ -13,21 +13,23 @@
     <!-- HEADER -->
     <header>
       <nav aria-label="Primary">
-        <a href="/generate.html" aria-current="page">Generate</a>
-        <a href="/my-plans.html">My Plans</a>
+        <!-- Brand logo -->
+        <a href="/" aria-label="DateSpark Home">
+          <img src="logo.png" alt="DateSpark Logo">
+        </a>
+
+        <!-- Primary navigation links -->
+        <a href="/generate.html">Generate</a>
+        <a href="/my-plans.html" aria-current="page">My Plans</a>
         <a href="/browse.html">Browse</a>
       </nav>
+
+      <h1 id="plans-title">My Saved Spark Plans</h1>
+      <p>Curate your journey of connection and romance.</p>
     </header>
 
     <!-- MAIN -->
     <main id="main-content">
-      <!-- Page heading -->
-      <section aria-labelledby="plans-title">
-        <div>
-          <h1 id="plans-title">My Saved Spark Plans</h1>
-          <p>Curate your journey of connection and romance.</p>
-        </div>
-
         <!-- Controls row: tabs + search -->
         <section aria-label="Plans controls">
           <!-- Tabs (semantic buttons) -->
@@ -56,118 +58,110 @@
 
       <!-- Plans grid -->
       <section aria-label="Upcoming plans">
-        <div aria-label="Plans list">
-          <!-- Card 1 -->
-          <article aria-labelledby="plan-1-title">
-            <div>
-              <figure>
-                <img
-                  src=""
-                  alt="Starlit rooftop picnic setting"
-                  width="600"
-                  height="360"
-                />
-              </figure>
+        <!-- Card 1 -->
+        <article aria-labelledby="plan-1-title">
+          <figure>
+            <img
+              src=""
+              alt="Starlit rooftop picnic setting"
+              width="600"
+              height="360"
+            />
+          </figure>
 
-              <!-- Card action: delete -->
-              <button type="button" aria-label="Remove Starlit Rooftop Picnic">
-                🗑
-              </button>
+          <!-- Card action: delete -->
+          <button type="button" aria-label="Remove Starlit Rooftop Picnic">
+            🗑
+          </button>
 
-              <h2 id="plan-1-title">Starlit Rooftop Picnic</h2>
+          <h2 id="plan-1-title">Starlit Rooftop Picnic</h2>
 
-              <!-- tags -->
-              <p aria-label="Plan tags">
-                <span>Romantic</span>
-                <span>NN</span>
-                <span>3 hrs</span>
-              </p>
-            </div>
+          <!-- tags -->
+          <p aria-label="Plan tags">
+            <span>Romantic</span>
+            <span>NN</span>
+            <span>3 hrs</span>
+          </p>
 
-            <p>
-              A curated evening with artisanal snacks, plush blankets, and a
-              telescope for star-gazing.
-            </p>
+          <p>
+            A curated evening with artisanal snacks, plush blankets, and a
+            telescope for star-gazing.
+          </p>
 
-            <!-- Card actions -->
-            <div aria-label="Plan actions">
-              <a href="/plans/starlit-rooftop-picnic">View Details</a>
-              <button type="button">Done</button>
-            </div>
-          </article>
+          <!-- Card actions -->
+          <div aria-label="Plan actions">
+            <a href="/plans/starlit-rooftop-picnic">View Details</a>
+            <button type="button">Done</button>
+          </div>
+        </article>
 
-          <!-- Card 2 -->
-          <article aria-labelledby="plan-2-title">
-            <div>
-              <figure>
-                <img
-                  src=""
-                  alt="Neon-lit vintage arcade machines"
-                  width="600"
-                  height="360"
-                />
-              </figure>
+        <!-- Card 2 -->
+        <article aria-labelledby="plan-2-title">
+          <figure>
+            <img
+              src=""
+              alt="Neon-lit vintage arcade machines"
+              width="600"
+              height="360"
+            />
+          </figure>
 
-              <button type="button" aria-label="Remove Vintage Arcade Date">
-                🗑
-              </button>
+          <button type="button" aria-label="Remove Vintage Arcade Date">
+            🗑
+          </button>
 
-              <h2 id="plan-2-title">Vintage Arcade Date</h2>
+          <h2 id="plan-2-title">Vintage Arcade Date</h2>
 
-              <p aria-label="Plan tags">
-                <span>Playful</span>
-                <span>N</span>
-                <span>4 hrs</span>
-              </p>
-            </div>
+          <p aria-label="Plan tags">
+            <span>Playful</span>
+            <span>N</span>
+            <span>4 hrs</span>
+          </p>
 
-            <p>
-              Connect over nostalgia with classic pinball, neon lights, and
-              shareable milkshakes.
-            </p>
+          <p>
+            Connect over nostalgia with classic pinball, neon lights, and
+            shareable milkshakes.
+          </p>
 
-            <div aria-label="Plan actions">
-              <a href="/plans/vintage-arcade-date">View Details</a>
-              <button type="button">Done</button>
-            </div>
-          </article>
+          <div aria-label="Plan actions">
+            <a href="/plans/vintage-arcade-date">View Details</a>
+            <button type="button">Done</button>
+          </div>
+        </article>
 
-          <!-- Card 3 -->
-          <article aria-labelledby="plan-3-title">
-            <div>
-              <figure>
-                <img
-                  src=""
-                  alt="Young plants sprouting in a garden bed"
-                  width="600"
-                  height="360"
-                />
-              </figure>
+        <!-- Card 3 -->
+        <article aria-labelledby="plan-3-title">
+          <figure>
+            <img
+              src=""
+              alt="Young plants sprouting in a garden bed"
+              width="600"
+              height="360"
+            />
+          </figure>
 
-              <button type="button" aria-label="Remove Botanical Garden Walk">
-                🗑
-              </button>
+          <button type="button" aria-label="Remove Botanical Garden Walk">
+            🗑
+          </button>
 
-              <h2 id="plan-3-title">Botanical Garden Walk</h2>
+          <h2 id="plan-3-title">Botanical Garden Walk</h2>
 
-              <p aria-label="Plan tags">
-                <span>Serene</span>
-                <span>Free</span>
-                <span>2 hrs</span>
-              </p>
-            </div>
+          <p aria-label="Plan tags">
+            <span>Serene</span>
+            <span>Free</span>
+            <span>2 hrs</span>
+          </p>
 
-            <p>
-              Quiet time together among rare flora and hidden sculpture paths.
-              Perfect for deep conversations.
-            </p>
+          <p>
+            Quiet time together among rare flora and hidden sculpture paths.
+            Perfect for deep conversations.
+          </p>
 
-            <div aria-label="Plan actions">
-              <a href="/plans/botanical-garden-walk">View Details</a>
-              <button type="button">Done</button>
-            </div>
-          </article>
-        </div>
+          <div aria-label="Plan actions">
+            <a href="/plans/botanical-garden-walk">View Details</a>
+            <button type="button">Done</button>
+          </div>
+        </article>
       </section>
     </main>
 

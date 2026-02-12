@@ -13,61 +13,60 @@
     <!-- HEADER -->
     <header>
       <nav aria-label="Primary">
+        <a href="/" aria-label="DateSpark Home">
+          <img src="logo.png" alt="DateSpark Logo">
+        </a>
+
+        <!-- Primary navigation links -->
         <a href="/generate.html" aria-current="page">Generate</a>
         <a href="/my-plans.html">My Plans</a>
         <a href="/browse.html">Browse</a>
       </nav>
+
+      <h1 id="hero-title">Ignite Your Next Adventure Together</h1>
+      <p>Personalized date ideas crafted for your unique connection.</p>
+
+      <form aria-label="Date idea generator">
+        <fieldset>
+          <legend class="sr-only">Filter your date idea</legend>
+
+          <label for="budget">
+            <span>Budget</span>
+            <select id="budget" name="budget">
+              <option value="">Price Range</option>
+              <option value="low">Low Cost</option>
+              <option value="mid">Mid Range</option>
+              <option value="high">High End</option>
+            </select>
+          </label>
+
+          <label for="activity">
+            <span>Activity</span>
+            <select id="activity" name="activity">
+              <option value="">Outdoor &amp; Cozy</option>
+              <option value="outdoor">Outdoor</option>
+              <option value="cozy">Cozy</option>
+              <option value="indoor">Indoor</option>
+            </select>
+          </label>
+
+          <label for="duration">
+            <span>Duration</span>
+            <select id="duration" name="duration">
+              <option value="">2 - 4 Hours</option>
+              <option value="1-2">1 - 2 Hours</option>
+              <option value="2-4">2 - 4 Hours</option>
+              <option value="4plus">4+ Hours</option>
+            </select>
+          </label>
+
+          <button type="submit">Generate Idea</button>
+        </fieldset>
+      </form>
     </header>
 
     <!-- MAIN -->
     <main id="main-content">
-      <!-- HERO / GENERATOR -->
-      <section aria-labelledby="hero-title">
-        <header>
-          <h1 id="hero-title">Ignite Your Next Adventure Together</h1>
-          <p>Personalized date ideas crafted for your unique connection.</p>
-        </header>
-
-        <!-- Generator controls -->
-        <form aria-label="Date idea generator">
-          <fieldset>
-            <legend class="sr-only">Filter your date idea</legend>
-
-            <label for="budget">
-              <span>Budget</span>
-              <select id="budget" name="budget">
-                <option value="">Price Range</option>
-                <option value="low">Low Cost</option>
-                <option value="mid">Mid Range</option>
-                <option value="high">High End</option>
-              </select>
-            </label>
-
-            <label for="activity">
-              <span>Activity</span>
-              <select id="activity" name="activity">
-                <option value="">Outdoor &amp; Cozy</option>
-                <option value="outdoor">Outdoor</option>
-                <option value="cozy">Cozy</option>
-                <option value="indoor">Indoor</option>
-              </select>
-            </label>
-
-            <label for="duration">
-              <span>Duration</span>
-              <select id="duration" name="duration">
-                <option value="">2 - 4 Hours</option>
-                <option value="1-2">1 - 2 Hours</option>
-                <option value="2-4">2 - 4 Hours</option>
-                <option value="4plus">4+ Hours</option>
-              </select>
-            </label>
-
-            <button type="submit">Generate Idea</button>
-          </fieldset>
-        </form>
-      </section>
-
       <!-- FEATURED GENERATED IDEA CARD -->
       <section aria-labelledby="featured-idea-title">
         <article aria-labelledby="featured-idea-title">
@@ -84,7 +83,7 @@
           </figure>
 
           <!-- Right content -->
-          <div>
+          <section>
             <!-- Tags -->
             <p aria-label="Idea tags">
               <span>Low Cost</span>
@@ -123,7 +122,7 @@
               <button type="button">Save to My Plans</button>
               <button type="button">Try Another Idea</button>
             </div>
-          </div>
+          </section>
         </article>
       </section>
 
@@ -137,7 +136,7 @@
         </header>
 
         <!-- Cards grid (use articles for each card) -->
-        <div aria-label="Inspiration ideas">
+        <section aria-label="Inspiration ideas">
           <article aria-label="Art Gallery Hop idea">
             <figure>
               <img src="" alt="Art gallery scene" width="400" height="280" />
@@ -208,7 +207,7 @@
             <h3>Cooking Night</h3>
             <a href="/browse/cooking-night">View Details</a>
           </article>
-        </div>
+        </section>
       </section>
     </main>
 
@@ -227,27 +226,12 @@
       </section>
 
       <nav aria-label="Footer">
-        <a href="/generate.html">Generate</a>
+        <a href="/generate.html" aria-current="page">Generate</a>
         <a href="/my-plans.html">My Plans</a>
         <a href="/browse.html">Browse</a>
       </nav>
 
       <small>© 2026 DateSpark. All rights reserved.</small>
     </footer>
-
-    <!-- Optional helper for visually-hidden text (if you add CSS later) -->
-    <!--
-      .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-      }
-    -->
   </body>
 </html>

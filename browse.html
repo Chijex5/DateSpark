@@ -1,153 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DateSpark - Browse Date Ideas</title>
-</head>
-<body>
-  <!-- Main site header with navigation -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DateSpark - Browse Date Ideas</title>
+  </head>
+  <body>
+    <!-- Skip link -->
+    <a href="#main-content">Skip to content</a>
+
+    <!-- Main site header with navigation -->
     <header>
       <nav>
         <!-- Brand logo -->
         <a href="/" aria-label="DateSpark Home">
           <img src="logo.png" alt="DateSpark Logo">
-          <span>DateSpark</span>
         </a>
 
         <!-- Primary navigation links -->
         <a href="/generate.html">Generate</a>
         <a href="/my-plans.html">My Plans</a>
-        <a href="/browse.html">Browse</a>
+        <a href="/browse.html" aria-current="page">Browse</a>
+      </nav>
+
+      <!-- Hero section with title and category filters -->
+      <h1>
+        Ignite Your Next<br>
+        <em>Adventure Together</em>
+      </h1>
+
+      <!-- Category filter buttons -->
+      <nav>
+        <button>All</button>
+        <button>Romantic</button>
+        <button>Active</button>
+        <button>Creative</button>
+        <button>Cozy</button>
+        <button>Foodie</button>
+        <button>Outdoor</button>
       </nav>
     </header>
 
     <!-- Main content container -->
     <main>
-      <!-- Hero section with title and category filters -->
-      <section>
-        <h1>
-          Ignite Your Next<br>
-          <em>Adventure Together</em>
-        </h1>
-
-        <!-- Category filter buttons -->
-        <nav>
-          <button>All</button>
-          <button>Romantic</button>
-          <button>Active</button>
-          <button>Creative</button>
-          <button>Cozy</button>
-          <button>Foodie</button>
-          <button>Outdoor</button>
-        </nav>
-      </section>
-
       <!-- Date ideas grid section -->
-      <section>
+      <section aria-labelledby="curated-title">
         <h2>Curated Date Experiences</h2>
 
         <!-- First row of date cards -->
-        <article>
+        <article aria-labelledby="moonlight-title">
           <!-- Date idea card 1: Moonlight Stroll & Cocoa -->
           <picture>
             <img src="moonlight-stroll.jpg" alt="Moonlight Stroll & Cocoa - Romantic outdoor date">
           </picture>
-          <div>
+          <p aria-label="Date tags">
             <span>OUTDOOR</span>
             <span>Free</span>
-          </div>
-          <h3>Moonlight Stroll & Cocoa</h3>
+          </p>
+          <h3 id="moonlight-title">Moonlight Stroll & Cocoa</h3>
           <p>A gentle walk under the stars followed by rich hot chocolate.</p>
         </article>
 
         <!-- Date idea card 2: Shared Canvas Workshop -->
-        <article>
+        <article aria-labelledby="canvas-title">
           <picture>
             <img src="canvas-workshop.jpg" alt="Shared Canvas Workshop - Creative date activity">
           </picture>
-          <div>
+          <p aria-label="Date tags">
             <span>CREATIVE</span>
             <span>₦₦</span>
-          </div>
+          </p>
           <h3>Shared Canvas Workshop</h3>
           <p>Express your love through paint on a single shared canvas.</p>
         </article>
 
         <!-- Date idea card 3: Vinyl & Vintage Wine -->
-        <article>
+        <article aria-labelledby="vinyl-title">
           <picture>
             <img src="vinyl-wine.jpg" alt="Vinyl & Vintage Wine - Cozy romantic date">
           </picture>
-          <div>
+          <p aria-label="Date tags">
             <span>COZY</span>
             <span>₦₦₦</span>
-          </div>
+          </p>
           <h3>Vinyl & Vintage Wine</h3>
           <p>Listen to classic records while exploring rare wines.</p>
         </article>
 
         <!-- Second row of date cards -->
-        <article>
+        <article aria-labelledby="sunrise-title">
           <!-- Date idea card 4: Sunrise Over the Valley -->
           <picture>
             <img src="sunrise-valley.jpg" alt="Sunrise Over the Valley - Romantic outdoor adventure">
           </picture>
-          <div>
+          <p aria-label="Date tags">
             <span>ROMANTIC</span>
             <span>₦₦₦</span>
-          </div>
+          </p>
           <h3>Sunrise Over the Valley</h3>
           <p>A breathtaking hot air balloon ride followed by brunch.</p>
         </article>
 
         <!-- Date idea card 5: Chef's Secret Garden -->
-        <article>
+        <article aria-labelledby="garden-title">
           <picture>
             <img src="secret-garden.jpg" alt="Chef's Secret Garden - Exclusive dining experience">
           </picture>
-          <div>
+          <p aria-label="Date tags">
             <span>FOODIE</span>
             <span>₦₦₦₦</span>
-          </div>
+          </p>
           <h3>Chef's Secret Garden</h3>
           <p>An exclusive multi-course farm-to-table dinner.</p>
         </article>
 
           <!-- Date idea card 6: Sunset Coastline Bike Ride -->
-        <article>
+        <article aria-labelledby="bike-title">
           <picture>
             <img src="bike-ride.jpg" alt="Sunset Coastline Bike Ride - Active outdoor date">
           </picture>
-          <div>
+          <p aria-label="Date tags">
             <span>ACTIVE</span>
             <span>₦</span>
-          </div>
+          </p>
           <h3>Sunset Coastline Bike Ride</h3>
           <p>Explore hidden coves on a guided evening bike tour.</p>
         </article>
       </section>
     </main>
 
-    <!-- Site footer -->
+    <!-- FOOTER -->
     <footer>
-      <!-- Footer branding -->
-      <h2>DateSpark</h2>
+      <section aria-label="Footer brand">
+        <a href="/" aria-label="DateSpark Home">
+          <span aria-hidden="true">♥</span>
+          <span>DateSpark</span>
+        </a>
 
-      <!-- Footer tagline -->
-      <p>
-        The ultimate destination for couples looking to discover new ways to connect. Ignite the spark and keep the adventure alive.
-      </p>
+        <p>
+          The ultimate destination for couples looking to discover new ways to
+          connect. Ignite the spark and keep the adventure alive.
+        </p>
+      </section>
 
-      <!-- Footer navigation links -->
-      <nav aria-label="Footer navigation">
+      <nav aria-label="Footer">
         <a href="/generate.html">Generate</a>
         <a href="/my-plans.html">My Plans</a>
-        <a href="/browse.html">Browse</a>
+        <a href="/browse.html" aria-current="page">Browse</a>
       </nav>
 
-      <!-- Copyright notice -->
-      <p>&copy; 2026 DateSpark. All rights reserved.</p>
+      <small>© 2026 DateSpark. All rights reserved.</small>
     </footer>
   </body>
 </html>

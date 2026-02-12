@@ -6,9 +6,11 @@
     <title>DateSpark | Ignite Your Next Adventure Together</title>
   </head>
   <body>
+    <!-- Skip link -->
+    <a href="#main-content">Skip to content</a>
 
     <header>
-      <nav>
+      <nav aria-label="Primary">
         <!-- brand logo -->
         <a href="/" aria-label="DateSpark Home">
           <img src="logo.png" alt="DateSpark Logo">
@@ -19,25 +21,22 @@
         <a href="/my-plans.html">My Plans</a>
         <a href="/browse.html">Browse</a>
       </nav>
+
+      <!-- Hero content -->
+      <h1>Ignite Your Next <span>Adventure Together</span></h1>
+      <p>Discover curated date ideas tailored to your budget, time, and style. Spend more time connecting and less time planning.</p>
+      <a href="/generate.html" class="cta-button">Get Started</a>
+
+      <picture class="hero-image">
+        <img src="hero-image.jpg" alt="Couple enjoying a romantic date" width="100%" height="auto">
+      </picture>
     </header>
 
     <!-- Main section -->
     <main>
-      <section class="img-background">
-        <img src="hero-image.jpg" alt="Couple enjoying a romantic date" width="100%" height="auto">
-      </section>
-      <section class="hero-content">
-        <h1>Ignite Your Next <span>Adventure Together</span></h1>
-        <p>Discover curated date ideas tailored to your budget, time, and style. Spend more time connecting and less time planning.</p>
-        <a href="/generate.html" class="cta-button">Get Started</a>
-        <div class="hero-image-frame">
-            <img src="hero-image.jpg" alt="Couple enjoying a romantic date" width="100%" height="auto">
-        </div>
-      </section>
-
       <!-- How it works section  -->
-      <section>
-        <h2>How DateSpark Works</h2>
+      <section aria-labelledby="how-it-works">
+        <h2 id="how-it-works">How DateSpark Works</h2>
         <p>We take the stress out of planning so you can focus on each other.</p>
         
         <!-- Feature 1: Smart Generator -->
@@ -62,19 +61,19 @@
         </article>
       </section>
 
-      <section class="romantic-experience">
+      <section class="romantic-experience" aria-labelledby="romantic-title">
         <h2>Curated Romantic Experiences</h2>
         <p>Handpicked experiences for romantic souls.</p>
         <div id="experience"></div>
       </section>
 
-      <section id="plans">
+      <section id="plans" aria-labelledby="plans-section-title">
         <h2>My Plans</h2>
         <p>Save and organize your favorite date ideas in one convenient place. Access them anytime, anywhere.</p>
         <a href="#plans" class="cta-button">View My Plans</a>
       </section>
 
-      <section id="browse">
+      <section id="browse" aria-labelledby="browse-section-title">
         <h2>Browse Date Ideas</h2>
         <p>Explore our extensive library of date ideas categorized by theme, location, and more. Find inspiration for every occasion.</p>
         <a href="/browse.html" class="cta-button ">Browse Ideas</a>
@@ -102,47 +101,53 @@
           <button>Get Started Free</button>
         </article>
       </section>
-      <section class="subscribe" id="subscribe">
-        <div class="subscribe-container">
-          <div class="Icon-class">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
-              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
-              <rect x="2" y="4" width="20" height="16" rx="2"/>
-            </svg>
-          </div>
-          <h2 class="subscribe-title">
-            Romance in your inbox
-          </h2>
-          <p class="subscribe-description">
-            Join our community of over 10,000 couples. Get weekly date inspiration, relationship advice, and exclusive deals.
-          </p>
-          <div class="email-input-subscribe-button">
-            <input type="email" placeholder="Enter your email address" class="email-input">
-            <button class="subscribe-button">Subscribe</button>
-          </div>
-          <p class="no-spam">
-            No spam, ever. Unsubscribe anytime.
-          </p>
-        </div>
+      
+      <section class="subscribe" id="subscribe"  aria-labelledby="subscribe-title">
+        <figure class="Icon-class" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+            <title>Mail icon</title>
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+          </svg>
+        </figure>
+        <h2 class="subscribe-title">
+          Romance in your inbox
+        </h2>
+        <p class="subscribe-description">
+          Join our community of over 10,000 couples. Get weekly date inspiration, relationship advice, and exclusive deals.
+        </p>
+        <form aria-label="Email subscription">
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" id="email" placeholder="Enter your email address" class="email-input">
+          <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
+        <p class="no-spam">
+          No spam, ever. Unsubscribe anytime.
+        </p>
       </section>
     </main>
 
-
+    <!-- FOOTER -->
     <footer>
-      <h2 class="footer-title">
-        DateSpark
-      </h2>
-      <p class="footer-description">
-        the ultimate destination for couples looking to discover new ways to connect. Ignite the spark and keep the adventure alive.
-      </p>
-      <nav class="footer-nav">
+      <section aria-label="Footer brand">
+        <a href="/" aria-label="DateSpark Home">
+          <span aria-hidden="true">♥</span>
+          <span>DateSpark</span>
+        </a>
+
+        <p>
+          The ultimate destination for couples looking to discover new ways to
+          connect. Ignite the spark and keep the adventure alive.
+        </p>
+      </section>
+
+      <nav aria-label="Footer">
         <a href="/generate.html">Generate</a>
         <a href="/my-plans.html">My Plans</a>
         <a href="/browse.html">Browse</a>
       </nav>
-      <div class="footer-end">
-        &copy; 2026 DateSpark. All rights reserved.
-      </div>
+
+      <small>© 2026 DateSpark. All rights reserved.</small>
     </footer>
   </body>
 </html>

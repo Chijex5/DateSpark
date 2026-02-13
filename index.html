@@ -6,107 +6,167 @@
     <title>DateSpark | Ignite Your Next Adventure Together</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="home-page">
     <!-- Skip link -->
-    <a href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header>
-      <nav aria-label="Primary">
-        <!-- brand logo -->
-        <a href="/" aria-label="DateSpark Home">
-          <img src="logo.png" alt="DateSpark Logo">
-        </a>
+   <header class="home-hero">
+      <nav class="navbar">
+          <!-- Logo -->
+          <a href="/" aria-label="DateSpark Home" class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+          <span class="sr-only">DateSpark</span>
+          </a>
+          <!-- Primary nav -->
+          <a href="/generate.html" class="middle">Generate</a>
+          <a href="/my-plans.html" class="middle">My Plans</a>
+          <a href="/browse.html" class="middle">Browse</a>
+          <!-- Auth -->
+          <a href="/login.html" class="auth">Login</a>
+          <a href="/signup.html" class="signup">Sign Up</a>
 
-        <!-- Primary nav links -->
-        <a href="/generate.html">Generate</a>
-        <a href="/my-plans.html">My Plans</a>
-        <a href="/browse.html">Browse</a> 
-        <a href="/login.html">Login</a> 
-        <a href="/signup.html">Sign Up</a> 
       </nav>
 
       <!-- Hero content -->
-      <h1>Ignite Your Next <span>Adventure Together</span></h1>
-      <p>Discover curated date ideas tailored to your budget, time, and style. Spend more time connecting and less time planning.</p>
-      <a href="/generate.html" class="cta-button">Get Started</a>
-
-      <picture class="hero-image">
-        <img src="hero-image.jpg" alt="Couple enjoying a romantic date" width="100%" height="auto">
-      </picture>
+      <div class="hero-content">
+        <span class="hero-pill">Make every moment count</span>
+        <h1 class="home-hero-title">Ignite Your Next <em>Adventure Together</em></h1>
+        <p class="home-hero-subtitle">Discover curated date ideas tailored to your budget, time, and style. Spend more time connecting and less time planning.</p>
+        <a href="/generate.html" class="cta-button home-hero-cta">Generate Date Ideas</a>
+      </div>
     </header>
 
     <!-- Main section -->
-    <main>
+    <main id="main-content" class="home-main">
       <!-- How it works section  -->
-      <section aria-labelledby="how-it-works">
-        <h2 id="how-it-works">How DateSpark Works</h2>
-        <p>We take the stress out of planning so you can focus on each other.</p>
+      <section aria-labelledby="how-it-works" class="home-section how-it-works">
+        <h2 id="how-it-works" class="section-title">How DateSpark Works</h2>
+        <p class="section-lead">We take the stress out of planning so you can focus on each other.</p>
+        <div class="feature-grid">
         
         <!-- Feature 1: Smart Generator -->
-        <article>
-          <span>Smart Generator Icon</span>
-          <h3>Smart Generator</h3>
-          <p>AI-powered suggestions based on your preferences, mood, and budget.</p>
+        <article class="feature-card">
+          <span class="feature-icon">Smart Generator Icon</span>
+          <h3 class="feature-title">Smart Generator</h3>
+          <p class="feature-text">AI-powered suggestions based on your preferences, mood, and budget.</p>
         </article>
 
         <!-- Feature 2: Personal Datebook -->
-        <article>
-          <span>Datebook Icon</span>
-          <h3>Your Personal Datebook</h3>
-          <p>Save your favorite generated ideas to view. My Plans tab. Organize special dates as your digital memories.</p>
+        <article class="feature-card">
+          <span class="feature-icon">Datebook Icon</span>
+          <h3 class="feature-title">Your Personal Datebook</h3>
+          <p class="feature-text">Save your favorite generated ideas to view. My Plans tab. Organize special dates as your digital memories.</p>
         </article>
 
         <!-- Feature 3: Curated Themes -->
-        <article>
-          <span>Themes Icon</span>
-          <h3>Curated Themes</h3>
-          <p>Instantly date-plan-home nights to daring outdoor escapades.</p>
+        <article class="feature-card">
+          <span class="feature-icon">Themes Icon</span>
+          <h3 class="feature-title">Curated Themes</h3>
+          <p class="feature-text">Instantly date-plan-home nights to daring outdoor escapades.</p>
         </article>
+        </div>
       </section>
 
-      <section class="romantic-experience" aria-labelledby="romantic-title">
-        <h2>Curated Romantic Experiences</h2>
-        <p>Handpicked experiences for romantic souls.</p>
-        <div id="experience"></div>
+      <section class="home-section romantic-experience" aria-labelledby="romantic-title">
+        <div class="experience-header">
+          <div class="experience-heading">
+            <h2 id="romantic-title" class="section-title">Curated Romantic Experiences</h2>
+            <p class="section-lead">Handpicked experiences for the romantic souls.</p>
+          </div>
+          <div class="experience-controls">
+            <button type="button" class="experience-button" aria-label="Previous experiences">‹</button>
+            <button type="button" class="experience-button" aria-label="Next experiences">›</button>
+          </div>
+        </div>
+
+        <div class="experience-list" id="experience">
+          <article class="experience-card">
+            <figure class="experience-media">
+              <img src="moonlight-stroll.jpg" alt="Stacked books and candlelight" />
+            </figure>
+            <p class="experience-tags">
+              <span>Outdoor</span>
+              <span>₦</span>
+            </p>
+            <h3 class="experience-title">Starlit Picnic in the Park</h3>
+            <p class="experience-text">A cozy setup with blankets, candles, and your favorite treats under the stars.</p>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-media">
+              <img src="canvas-workshop.jpg" alt="Shared pottery workshop" />
+            </figure>
+            <p class="experience-tags">
+              <span>Creative</span>
+              <span>₦₦</span>
+            </p>
+            <h3 class="experience-title">Pottery Wheel Workshop</h3>
+            <p class="experience-text">Get your hands dirty and create something beautiful together.</p>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-media">
+              <img src="vinyl-wine.jpg" alt="Cozy lounge with vintage wine" />
+            </figure>
+            <p class="experience-tags">
+              <span>Cozy</span>
+              <span>₦₦₦</span>
+            </p>
+            <h3 class="experience-title">Vinyl &amp; Vintage Wine Night</h3>
+            <p class="experience-text">Listen to classic records while exploring rare wines in a private lounge.</p>
+          </article>
+
+          <article class="experience-card">
+            <figure class="experience-media">
+              <img src="sunrise-valley.jpg" alt="Golden sunrise hike" />
+            </figure>
+            <p class="experience-tags">
+              <span>Outdoor</span>
+              <span>₦</span>
+            </p>
+            <h3 class="experience-title">Sunrise Hike</h3>
+            <p class="experience-text">Start the day with a calm hike and warm drinks as the sun rises.</p>
+          </article>
+        </div>
       </section>
 
-      <section id="plans" aria-labelledby="plans-section-title">
-        <h2>My Plans</h2>
-        <p>Save and organize your favorite date ideas in one convenient place. Access them anytime, anywhere.</p>
+      <section id="plans" aria-labelledby="plans-section-title" class="home-section home-plans">
+        <h2 class="section-title">My Plans</h2>
+        <p class="section-lead">Save and organize your favorite date ideas in one convenient place. Access them anytime, anywhere.</p>
         <a href="#plans" class="cta-button">View My Plans</a>
       </section>
 
-      <section id="browse" aria-labelledby="browse-section-title">
-        <h2>Browse Date Ideas</h2>
-        <p>Explore our extensive library of date ideas categorized by theme, location, and more. Find inspiration for every occasion.</p>
+      <section id="browse" aria-labelledby="browse-section-title" class="home-section home-browse">
+        <h2 class="section-title">Browse Date Ideas</h2>
+        <p class="section-lead">Explore our extensive library of date ideas categorized by theme, location, and more. Find inspiration for every occasion.</p>
         <a href="/browse.html" class="cta-button ">Browse Ideas</a>
       </section>
 
       <!-- Create memories section -->
-      <section>
+      <section class="home-section memories-section">
         <!-- Image of couple -->
-        <picture>
-          <img src="couple.jpg" alt="Happy couple embracing">
+        <picture class="memories-media">
+          <img src="/public/couple.webp" alt="Happy couple embracing">
         </picture>
         
         <!-- Content describing the value proposition -->
-        <article>
-          <h2>Create Memories Together</h2>
-          <p>Relationships thrive on new experiences. We help you find the inspiration you need to keep the spark alive, whether it's your first date or your 50th anniversary.</p>
+        <article class="memories-content">
+          <h2 class="section-title">Create Memories Together</h2>
+          <p class="section-lead">Relationships thrive on new experiences. We help you find the inspiration you need to keep the spark alive, whether it's your first date or your 50th anniversary.</p>
           
           <!-- Key benefits -->
-          <ul>
+          <ul class="memories-list">
             <li>Budget-friendly options</li>
             <li>Seasonal date ideas</li>
             <li>Spontaneous adventure ready</li>
           </ul>
           
-          <button>Get Started Free</button>
+          <button class="memories-button">Get Started Free</button>
         </article>
       </section>
       
-      <section class="subscribe" id="subscribe"  aria-labelledby="subscribe-title">
-        <figure class="Icon-class" aria-hidden="true">
+      <section class="home-section subscribe" id="subscribe"  aria-labelledby="subscribe-title">
+        <figure class="subscribe-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
             <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
             <title>Mail icon</title>
@@ -117,10 +177,10 @@
           Romance in your inbox
         </h2>
         <p class="subscribe-description">
-          Join our community of over 10,000 couples. Get weekly date inspiration, relationship advice, and exclusive deals.
+          Join our community of over 10,000 couples. Get weekly date inspiration, 
+          <br>relationship advice, and exclusive deals.
         </p>
-        <form aria-label="Email subscription">
-          <label for="email" class="sr-only">Email address</label>
+        <form aria-label="Email subscription" class="subscribe-form">
           <input type="email" id="email" placeholder="Enter your email address" class="email-input">
           <button type="submit" class="subscribe-button">Subscribe</button>
         </form>
@@ -132,7 +192,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <section aria-label="Footer brand">
+      <section aria-label="Footer brand" class="footer-brand">
         <a href="/" aria-label="DateSpark Home">
           <span aria-hidden="true">♥</span>
           <span>DateSpark</span>

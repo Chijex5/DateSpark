@@ -961,13 +961,13 @@ a.signup:hover {
   max-width: var(--size-hero-max);
   margin: var(--space-8) auto var(--space-2);
   font-size: clamp(var(--text-size-hero-min), var(--text-size-hero-fluid), var(--text-size-hero-max));
-  text-align: left;
+  text-align: center;
 }
 
 .plans-page header p {
   max-width: var(--size-hero-text-max);
   margin: 0 auto var(--space-8);
-  text-align: left;
+  text-align: center;
 }
 
 .plans-page main {
@@ -1589,6 +1589,10 @@ a.signup:hover {
   display: block;
   text-align: center;
   opacity: 0.75;
+}
+
+footer p {
+  color: var(--color-white);
 }
 
 @media (max-width: 1024px) {

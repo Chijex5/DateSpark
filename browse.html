@@ -6,32 +6,35 @@
     <title>DateSpark - Browse Date Ideas</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="browse-page">
     <!-- Skip link -->
-    <a href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- Main site header with navigation -->
     <header>
-      <nav>
-        <!-- Brand logo -->
-        <a href="/" aria-label="DateSpark Home">
-          <img src="logo.png" alt="DateSpark Logo">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="/" aria-label="DateSpark Home" class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
+        <span class="sr-only">DateSpark</span>
         </a>
-
-        <!-- Primary navigation links -->
-        <a href="/generate.html">Generate</a>
-        <a href="/my-plans.html">My Plans</a>
-        <a href="/browse.html" aria-current="page">Browse</a>
+        <!-- Primary nav -->
+        <a href="/generate.html" class="middle">Generate</a>
+        <a href="/my-plans.html" class="middle">My Plans</a>
+        <a href="/browse.html" class="middle active">Browse</a>
+        <!-- Auth -->
+        <a href="/login.html" class="auth">Login</a>
+        <a href="/signup.html" class="signup">Sign Up</a>
       </nav>
 
       <!-- Hero section with title and category filters -->
-      <h1>
+      <h1 class="browse-title">
         Ignite Your Next<br>
         <em>Adventure Together</em>
       </h1>
 
       <!-- Category filter buttons -->
-      <nav>
+      <nav class="browse-filters">
         <button>All</button>
         <button>Romantic</button>
         <button>Active</button>
@@ -43,18 +46,18 @@
     </header>
 
     <!-- Main content container -->
-    <main>
+    <main id="main-content">
       <!-- Date ideas grid section -->
-      <section aria-labelledby="curated-title">
-        <h2>Curated Date Experiences</h2>
+      <section aria-labelledby="curated-title" class="browse-grid">
+        <h2 class="browse-grid-title">Curated Date Experiences</h2>
 
         <!-- First row of date cards -->
-        <article aria-labelledby="moonlight-title">
+        <article aria-labelledby="moonlight-title" class="browse-card">
           <!-- Date idea card 1: Moonlight Stroll & Cocoa -->
-          <picture>
+          <picture class="browse-media">
             <img src="moonlight-stroll.jpg" alt="Moonlight Stroll & Cocoa - Romantic outdoor date">
           </picture>
-          <p aria-label="Date tags">
+          <p aria-label="Date tags" class="browse-tags">
             <span>OUTDOOR</span>
             <span>Free</span>
           </p>
@@ -63,11 +66,11 @@
         </article>
 
         <!-- Date idea card 2: Shared Canvas Workshop -->
-        <article aria-labelledby="canvas-title">
-          <picture>
+        <article aria-labelledby="canvas-title" class="browse-card">
+          <picture class="browse-media">
             <img src="canvas-workshop.jpg" alt="Shared Canvas Workshop - Creative date activity">
           </picture>
-          <p aria-label="Date tags">
+          <p aria-label="Date tags" class="browse-tags">
             <span>CREATIVE</span>
             <span>₦₦</span>
           </p>
@@ -76,11 +79,11 @@
         </article>
 
         <!-- Date idea card 3: Vinyl & Vintage Wine -->
-        <article aria-labelledby="vinyl-title">
-          <picture>
+        <article aria-labelledby="vinyl-title" class="browse-card">
+          <picture class="browse-media">
             <img src="vinyl-wine.jpg" alt="Vinyl & Vintage Wine - Cozy romantic date">
           </picture>
-          <p aria-label="Date tags">
+          <p aria-label="Date tags" class="browse-tags">
             <span>COZY</span>
             <span>₦₦₦</span>
           </p>
@@ -89,12 +92,12 @@
         </article>
 
         <!-- Second row of date cards -->
-        <article aria-labelledby="sunrise-title">
+        <article aria-labelledby="sunrise-title" class="browse-card">
           <!-- Date idea card 4: Sunrise Over the Valley -->
-          <picture>
+          <picture class="browse-media">
             <img src="sunrise-valley.jpg" alt="Sunrise Over the Valley - Romantic outdoor adventure">
           </picture>
-          <p aria-label="Date tags">
+          <p aria-label="Date tags" class="browse-tags">
             <span>ROMANTIC</span>
             <span>₦₦₦</span>
           </p>
@@ -103,11 +106,11 @@
         </article>
 
         <!-- Date idea card 5: Chef's Secret Garden -->
-        <article aria-labelledby="garden-title">
-          <picture>
+        <article aria-labelledby="garden-title" class="browse-card">
+          <picture class="browse-media">
             <img src="secret-garden.jpg" alt="Chef's Secret Garden - Exclusive dining experience">
           </picture>
-          <p aria-label="Date tags">
+          <p aria-label="Date tags" class="browse-tags">
             <span>FOODIE</span>
             <span>₦₦₦₦</span>
           </p>
@@ -116,11 +119,11 @@
         </article>
 
           <!-- Date idea card 6: Sunset Coastline Bike Ride -->
-        <article aria-labelledby="bike-title">
-          <picture>
+        <article aria-labelledby="bike-title" class="browse-card">
+          <picture class="browse-media">
             <img src="bike-ride.jpg" alt="Sunset Coastline Bike Ride - Active outdoor date">
           </picture>
-          <p aria-label="Date tags">
+          <p aria-label="Date tags" class="browse-tags">
             <span>ACTIVE</span>
             <span>₦</span>
           </p>
@@ -132,7 +135,7 @@
 
     <!-- FOOTER -->
     <footer>
-      <section aria-label="Footer brand">
+      <section aria-label="Footer brand" class="footer-brand">
         <a href="/" aria-label="DateSpark Home">
           <span aria-hidden="true">♥</span>
           <span>DateSpark</span>

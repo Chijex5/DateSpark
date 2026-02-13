@@ -7,23 +7,40 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
+  <body class="generate-page">
     <!-- Skip link for accessibility -->
-    <a href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">Skip to content</a>
 
     <!-- HEADER -->
     <header>
-      <nav aria-label="Primary">
-        <a href="/" aria-label="DateSpark Home">
-          <img src="logo.png" alt="DateSpark Logo">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="/" aria-label="DateSpark Home" class="logo">
+        <svg 
+          xmlns="http://www.w3.org/2000/svg" width="24" 
+          height="24" 
+          viewBox="0 0 24 24" 
+          fill="none" 
+          stroke="currentColor" 
+          stroke-width="2" 
+          stroke-linecap="round" stroke-linejoin="round" 
+          class="lucide lucide-sparkles-icon lucide-sparkles"
+        >
+          <title>Sparkles</title>
+          <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+          <path d="M20 2v4"/>
+          <path d="M22 4h-4"/>
+          <circle cx="4" cy="20" r="2"/>
+        </svg>
+        <span class="sr-only">DateSpark</span>
         </a>
-
-        <!-- Primary navigation links -->
-        <a href="/generate.html" aria-current="page">Generate</a>
-        <a href="/my-plans.html">My Plans</a>
-        <a href="/browse.html">Browse</a> 
-        <a href="/login.html">Login</a> 
-        <a href="/signup.html">Sign Up</a> 
+        <!-- Primary nav -->
+        <a href="/generate.html" class="middle active">Generate</a>
+        <a href="/my-plans.html" class="middle">My Plans</a>
+        <a href="/browse.html" class="middle">Browse</a>
+        <!-- Auth -->
+        <a href="/login.html" class="auth">Login</a>
+        <a href="/signup.html" class="signup">Sign Up</a>
       </nav>
 
       <h1 id="hero-title">Ignite Your Next Adventure Together</h1>
@@ -31,7 +48,7 @@
 
       <form aria-label="Date idea generator">
         <fieldset>
-          <legend class="sr-only">Filter your date idea</legend>
+          <legend class="sr-only hidden">Filter your date idea</legend>
 
           <label for="budget">
             <span>Budget</span>
@@ -71,7 +88,7 @@
     <!-- MAIN -->
     <main id="main-content">
       <!-- FEATURED GENERATED IDEA CARD -->
-      <section aria-labelledby="featured-idea-title">
+      <section aria-labelledby="featured-idea-title" class="featured-idea-title">
         <article aria-labelledby="featured-idea-title">
           <!-- Left media -->
           <figure>
@@ -88,13 +105,13 @@
           <!-- Right content -->
           <section>
             <!-- Tags -->
-            <p aria-label="Idea tags">
+            <p aria-label="Idea tags" class="idea-tags">
               <span>Low Cost</span>
               <span>2-4 Hours</span>
               <span>Outdoor</span>
             </p>
 
-            <aside>
+            <aside class="idea-summary">
               <h2 id="featured-idea-title">Starlit Picnic &amp; Astronomy</h2>
               <p>
                 A romantic evening under the stars. Escape the city lights and
@@ -104,14 +121,14 @@
             </aside>
 
             <!-- Two-column info blocks -->
-            <section aria-labelledby="essentials-title">
+            <section aria-labelledby="essentials-title" class="essentials">
               <h3 id="essentials-title">Essentials</h3>
               <p>Cozy blanket &amp; plush pillows</p>
               <p>Stargazing / constellation app</p>
               <p>Thermos of warm cocoa</p>
             </section>
 
-            <aside aria-labelledby="romantic-tip-title">
+            <aside aria-labelledby="romantic-tip-title" class="romantics">
               <h3 id="romantic-tip-title">Romantic Tip</h3>
               <p>
                 A new moon phase provides the darkest skies. Try to go when the
@@ -121,7 +138,7 @@
             </aside>
 
             <!-- Actions -->
-            <div aria-label="Idea actions">
+            <div aria-label="Idea actions" class="idea-actions">
               <button type="button">Save to My Plans</button>
               <button type="button">Try Another Idea</button>
             </div>
@@ -130,7 +147,7 @@
       </section>
 
       <!-- INSPIRATION / BROWSE PREVIEW -->
-      <section aria-labelledby="inspiration-title">
+      <section aria-labelledby="inspiration-title" class="inspiration-preview">
         <header>
           <h2 id="inspiration-title">Need More Inspiration?</h2>
           <p>Explore hand-picked dates loved by our community</p>
@@ -139,7 +156,7 @@
         </header>
 
         <!-- Cards grid (use articles for each card) -->
-        <section aria-label="Inspiration ideas">
+        <section aria-label="Inspiration ideas" class="inspiration-ideas">
           <article aria-label="Art Gallery Hop idea">
             <figure>
               <img src="" alt="Art gallery scene" width="400" height="280" />
@@ -216,10 +233,9 @@
 
     <!-- FOOTER -->
     <footer>
-      <section aria-label="Footer brand">
+      <section aria-label="Footer brand" class="footer-brand">
         <a href="/" aria-label="DateSpark Home">
-          <span aria-hidden="true">♥</span>
-          <span>DateSpark</span>
+          DateSpark
         </a>
 
         <p>

@@ -10,21 +10,51 @@
     <!-- Skip link -->
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-   <header class="home-hero">
-      <nav class="navbar">
-          <!-- Logo -->
-          <a href="/" aria-label="DateSpark Home" class="logo">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles-icon lucide-sparkles"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg>
-          <span class="sr-only">DateSpark</span>
-          </a>
-          <!-- Primary nav -->
-          <a href="/generate.html" class="middle">Generate</a>
-          <a href="/my-plans.html" class="middle">My Plans</a>
-          <a href="/browse.html" class="middle">Browse</a>
-          <!-- Auth -->
-          <a href="/login.html" class="auth">Login</a>
-          <a href="/signup.html" class="signup">Sign Up</a>
+    <header class="home-hero">
+      <nav class="navbar" aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="/" aria-label="DateSpark Home" class="logo">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="lucide lucide-sparkles-icon lucide-sparkles"
+          >
+            <title>Sparkles</title>
+            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+            <path d="M20 2v4"/>
+            <path d="M22 4h-4"/>
+            <circle cx="4" cy="20" r="2"/>
+          </svg>
+          <span class="logo-name">DateSpark</span>
+        </a>
 
+        <!-- Mobile hamburger -->
+        <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true">
+        <label for="nav-check" class="nav-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+
+        <!-- Primary nav -->
+        <div class="nav-links">
+          <a href="/generate.html" class="nav-link">Generate</a>
+          <a href="/my-plans.html" class="nav-link">My Plans</a>
+          <a href="/browse.html" class="nav-link">Browse</a>
+        </div>
+
+        <!-- Auth buttons -->
+        <div class="nav-auth-group">
+          <a href="/login.html" class="nav-auth">Login</a>
+          <a href="/signup.html" class="nav-signup">Sign Up</a>
+        </div>
       </nav>
 
       <!-- Hero content -->
@@ -44,26 +74,32 @@
         <p class="section-lead">We take the stress out of planning so you can focus on each other.</p>
         <div class="feature-grid">
         
-        <!-- Feature 1: Smart Generator -->
-        <article class="feature-card">
-          <span class="feature-icon">Smart Generator Icon</span>
-          <h3 class="feature-title">Smart Generator</h3>
-          <p class="feature-text">AI-powered suggestions based on your preferences, mood, and budget.</p>
-        </article>
+          <!-- Feature 1: Smart Generator -->
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Smart Generator</title><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></svg>
+            </div>
+            <h3 class="feature-title">Smart Generator</h3>
+            <p class="feature-text">AI-powered suggestions based on your preferences, mood, and budget.</p>
+          </article>
 
-        <!-- Feature 2: Personal Datebook -->
-        <article class="feature-card">
-          <span class="feature-icon">Datebook Icon</span>
-          <h3 class="feature-title">Your Personal Datebook</h3>
-          <p class="feature-text">Save your favorite generated ideas to view. My Plans tab. Organize special dates as your digital memories.</p>
-        </article>
+          <!-- Feature 2: Personal Datebook -->
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Your Personal Datebook</title><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+            </div>
+            <h3 class="feature-title">Your Personal Datebook</h3>
+            <p class="feature-text">Save your favorite generated ideas to view. My Plans tab. Organize special dates as your digital memories.</p>
+          </article>
 
-        <!-- Feature 3: Curated Themes -->
-        <article class="feature-card">
-          <span class="feature-icon">Themes Icon</span>
-          <h3 class="feature-title">Curated Themes</h3>
-          <p class="feature-text">Instantly date-plan-home nights to daring outdoor escapades.</p>
-        </article>
+          <!-- Feature 3: Curated Themes -->
+          <article class="feature-card">
+            <div class="feature-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><title>Themes icon</title><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <h3 class="feature-title">Curated Themes</h3>
+            <p class="feature-text">Instantly date-plan-home nights to daring outdoor escapades.</p>
+          </article>
         </div>
       </section>
 
@@ -130,17 +166,17 @@
         </div>
       </section>
 
-      <section id="plans" aria-labelledby="plans-section-title" class="home-section home-plans">
+      <!-- <section id="plans" aria-labelledby="plans-section-title" class="home-section home-plans">
         <h2 class="section-title">My Plans</h2>
         <p class="section-lead">Save and organize your favorite date ideas in one convenient place. Access them anytime, anywhere.</p>
         <a href="#plans" class="cta-button">View My Plans</a>
-      </section>
+      </section> -->
 
-      <section id="browse" aria-labelledby="browse-section-title" class="home-section home-browse">
+      <!-- <section id="browse" aria-labelledby="browse-section-title" class="home-section home-browse">
         <h2 class="section-title">Browse Date Ideas</h2>
         <p class="section-lead">Explore our extensive library of date ideas categorized by theme, location, and more. Find inspiration for every occasion.</p>
         <a href="/browse.html" class="cta-button ">Browse Ideas</a>
-      </section>
+      </section> -->
 
       <!-- Create memories section -->
       <section class="home-section memories-section">
@@ -161,10 +197,14 @@
             <li>Spontaneous adventure ready</li>
           </ul>
           
-          <button class="memories-button">Get Started Free</button>
+          <!-- <button class="memories-button">Get Started Free</button> -->
+          <a href="/generate.html" class="cta-button memories-button">
+            Get Started Free
+          </a>
         </article>
       </section>
       
+      <!-- Subscribe section -->
       <section class="home-section subscribe" id="subscribe"  aria-labelledby="subscribe-title">
         <figure class="subscribe-icon" aria-hidden="true">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail">
@@ -181,6 +221,7 @@
           <br>relationship advice, and exclusive deals.
         </p>
         <form aria-label="Email subscription" class="subscribe-form">
+          <label for="email" class="sr-only">Email address</label>
           <input type="email" id="email" placeholder="Enter your email address" class="email-input">
           <button type="submit" class="subscribe-button">Subscribe</button>
         </form>
@@ -191,10 +232,27 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="site-footer">
       <section aria-label="Footer brand" class="footer-brand">
-        <a href="/" aria-label="DateSpark Home">
-          <span aria-hidden="true">♥</span>
+        <a href="/" aria-label="DateSpark Home" class="footer-logo">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="2" 
+            stroke-linecap="round" 
+            stroke-linejoin="round" 
+            class="lucide lucide-sparkles-icon lucide-sparkles"
+          >
+            <title>Sparkles</title>
+            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+            <path d="M20 2v4"/>
+            <path d="M22 4h-4"/>
+            <circle cx="4" cy="20" r="2"/>
+          </svg>
           <span>DateSpark</span>
         </a>
 
@@ -204,7 +262,7 @@
         </p>
       </section>
 
-      <nav aria-label="Footer">
+      <nav aria-label="Footer" class="footer-nav">
         <a href="/generate.html">Generate</a>
         <a href="/my-plans.html">My Plans</a>
         <a href="/browse.html">Browse</a>

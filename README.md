@@ -51,4 +51,10 @@ Layered radial gradients create romantic atmospheres. Pages use dual gradients o
 
 ---
 
+## Case Study Links
+
+- **Chijioke Uzodinma:** 
+- **Grace Olabode:** https://dev.to/grace_olabode_3be546efe9b/building-datespark-a-date-planning-app-for-couples-2d46
+
+---
 

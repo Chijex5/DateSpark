@@ -649,6 +649,12 @@ button {
   outline: none;
 }
 
+.generate-page .page-header select option {
+  background: var(--color-bg-white);
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
 .generate-page .page-header button[type="submit"] {
   padding: var(--space-3-8) var(--space-7-2);
   border-radius: var(--radius-full);
@@ -687,7 +693,6 @@ button {
   background: var(--bg-night-sky);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  aspect-ratio: 4 / 3;
 }
 
 .generate-page .page-main figure img {
@@ -803,10 +808,9 @@ button {
 .inspiration-preview header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--space-6);
   flex-wrap: wrap;
-  margin-bottom: var(--space-6);
 }
 
 .inspiration-preview header a {
@@ -1204,6 +1208,7 @@ button {
   box-shadow: var(--shadow-card);
   padding: var(--space-6);
   display: grid;
+  align-content: start;
   gap: var(--space-3);
   text-align: left;
 }
@@ -1295,8 +1300,8 @@ button {
 }
 
 .memories-section {
-  display: flex;
-  height: var(--size-full);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-8);
   align-items: center;
 }
@@ -1441,8 +1446,15 @@ button {
   padding: var(--space-12) var(--space-4) var(--space-8);
 }
 
+.footer-brand {
+  max-width: var(--size-footer-max);
+  margin: 0 auto var(--space-6);
+  text-align: center;
+}
+
 .footer-logo{
   display: flex;
+  justify-content: center;
   margin-bottom: var(--space-4);
 }
 
@@ -1457,13 +1469,14 @@ button {
 }
 
 .site-footer p {
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--space-4);
   color: var(--color-bg-white);
 }
 
 .footer-nav {
   display: flex;
   justify-content: center;
+  margin: 0 0 var(--space-4);
   gap: var(--space-6);
   flex-wrap: wrap;
 }
@@ -1604,11 +1617,6 @@ button {
 
   .browse-page .browse-grid {
     grid-template-columns: 1fr;
-  }
-
-  .plans-page .page-title,
-  .plans-page .page-header > p {
-    text-align: left;
   }
 
   .plans-page .plans-search input {
@@ -1757,7 +1765,6 @@ button {
     font-size: var(--text-size-xs);
   }
 
-  /* --- Plans Page  --- */
   .plans-controls {
     flex-direction: column;
     align-items: stretch;
@@ -1789,5 +1796,10 @@ button {
     height: var(--space-6);
     top: var(--space-3);
     right: var(--space-3);
+  }
+
+  /* generate page */
+  .generate-page .page-header > p {
+    padding: 0 var(--space-4)
   }
 }

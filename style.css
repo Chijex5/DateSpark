@@ -592,6 +592,7 @@ button {
 /* Generate Page */
 .generate-page .page-header form {
   max-width: var(--size-form-max);
+  width: min(var(--size-form-max), calc(var(--size-full) - (var(--space-4) * 2)));
   margin: 0 auto;
   margin-bottom: var(--space-12);
   background: var(--color-bg-white);
@@ -709,6 +710,7 @@ button {
     "essentials tip"
     "actions actions";
   gap: var(--space-6);
+  min-width: 0;
 }
 
 .idea-tags {
@@ -732,6 +734,7 @@ button {
 
 .featured-idea-title .idea-summary {
   grid-area: title;
+  min-width: 0;
 }
 
 .featured-idea-title .idea-summary h2 {
@@ -1554,11 +1557,23 @@ button {
   }
 
   .generate-page .page-header form {
+    width: min(100%, 430px);
     border-radius: var(--radius-xl);
+    margin-bottom: var(--space-8);
   }
 
   .generate-page .page-header fieldset {
     grid-template-columns: 1fr;
+  }
+
+  .generate-page .page-header button[type="submit"] {
+    width: 100%;
+  }
+
+  .generate-page .featured-idea-title article {
+    grid-template-columns: 1fr;
+    padding: var(--space-5);
+    gap: var(--space-5);
   }
 
   .featured-idea-title article > section {
@@ -1569,6 +1584,13 @@ button {
       "essentials"
       "tip"
       "actions";
+    gap: var(--space-4);
+  }
+
+  .featured-idea-title .idea-summary h2 {
+    font-size: clamp(1.65rem, 8.2vw, 2.05rem);
+    line-height: 1.15;
+    text-wrap: balance;
   }
 
   .inspiration-ideas {
@@ -1642,6 +1664,18 @@ button {
 }
 
 @media (max-width: 480px) {
+  .generate-page .page-main {
+    padding: 0 var(--space-3) var(--space-12);
+  }
+
+  .generate-page .featured-idea-title article {
+    padding: var(--space-4);
+  }
+
+  .featured-idea-title .idea-summary h2 {
+    font-size: clamp(1.45rem, 8.6vw, 1.8rem);
+  }
+
   .hero-content { padding: var(--space-8) var(--space-4) var(--space-12); }
   .how-it-works { margin-top: 0; }
   .home-main    { margin-top: var(--space-8); }

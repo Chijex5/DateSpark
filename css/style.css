@@ -1266,12 +1266,25 @@ button {
 .experience-button:hover { transform: scale(1.08); }
 
 .experience-list {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: flex;
+  flex-direction: row; /* Explicitly forces a horizontal line */
+  flex-wrap: nowrap;   /* Absolutely prevents cards from dropping to the next line */
   gap: var(--space-6);
+  overflow-x: auto;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smoother scrolling on mobile */
 }
 
-.experience-card {
+.experience-list::-webkit-scrollbar {
+  display: none; 
+}
+
+.experience-list .experience-card {
+  flex: 0 0 320px;  
+  width: 320px; 
+  max-width: 320px;    
+  scroll-snap-align: start;
   background: var(--color-home-surface);
   box-shadow: var(--shadow-home-card);
 }
@@ -1491,8 +1504,7 @@ button {
   .inspiration-ideas,
   .browse-page .browse-grid,
   .plans-page .plans-grid, 
-  .feature-grid,
-  .experience-list {
+  .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1650,10 +1662,6 @@ button {
   }
 
   .feature-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .experience-list {
     grid-template-columns: 1fr;
   }
 

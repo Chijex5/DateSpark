@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DateSpark - Browse Date Ideas</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
   </head>
   <body class="browse-page page-shell">
     <!-- Skip link -->
@@ -46,15 +46,15 @@
 
         <!-- Primary nav -->
         <div class="nav-links">
-          <a href="/generate.html" class="nav-link">Generate</a>
-          <a href="/my-plans.html" class="nav-link">My Plans</a>
-          <a href="/browse.html" class="nav-link active">Browse</a>
+          <a href="generate.html" class="nav-link">Generate</a>
+          <a href="my-plans.html" class="nav-link">My Plans</a>
+          <a href="browse.html" class="nav-link active">Browse</a>
         </div>
 
         <!-- Auth buttons -->
         <div class="nav-auth-group">
-          <a href="/login.html" class="nav-auth">Login</a>
-          <a href="/signup.html" class="nav-signup">Sign Up</a>
+          <a href="login.html" class="nav-auth">Login</a>
+          <a href="signup.html" class="nav-signup">Sign Up</a>
         </div>
       </nav>
 
@@ -65,26 +65,25 @@
       </h1>
 
       <!-- Category filter buttons -->
-      <nav class="browse-filters">
-        <button>All</button>
-        <button>Romantic</button>
-        <button>Active</button>
-        <button>Creative</button>
-        <button>Cozy</button>
-        <button>Foodie</button>
-        <button>Outdoor</button>
+      <nav class="browse-filters" id="filter-container">
+        <button class="filter-btn active" data-category="All">All</button>
+        <button class="filter-btn" data-category="Romantic">Romantic</button>
+        <button class="filter-btn" data-category="Active">Active</button>
+        <button class="filter-btn" data-category="Creative">Creative</button>
+        <button class="filter-btn" data-category="Cozy">Cozy</button>
+        <button class="filter-btn" data-category="Foodie">Foodie</button>
+        <button class="filter-btn" data-category="Outdoor">Outdoor</button>
       </nav>
     </header>
 
     <!-- Main content container -->
     <main id="main-content" class="page-main">
       <!-- Date ideas grid section -->
-      <section aria-labelledby="curated-title" class="browse-grid">
-        <h2 class="browse-grid-title">Curated Date Experiences</h2>
+      <section aria-labelledby="curated-title" class="browse-grid" id="browse-grid">
+        <h2 class="browse-grid-title" id="curated-title">Curated Date Experiences</h2>
 
         <!-- First row of date cards -->
-        <article aria-labelledby="moonlight-title" class="browse-card card">
-          <!-- Date idea card 1: Moonlight Stroll & Cocoa -->
+        <!-- <article aria-labelledby="moonlight-title" class="browse-card card">
           <picture class="browse-media card-media">
             <img src="https://images.unsplash.com/photo-1531789965484-b656c2777ae2?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Moonlight Stroll & Cocoa - Romantic outdoor date">
           </picture>
@@ -94,10 +93,10 @@
           </p>
           <h3 id="moonlight-title">Moonlight Stroll & Cocoa</h3>
           <p>A gentle walk under the stars followed by rich hot chocolate.</p>
-        </article>
+        </article> -->
 
         <!-- Date idea card 2: Shared Canvas Workshop -->
-        <article aria-labelledby="canvas-title" class="browse-card card">
+        <!-- <article aria-labelledby="canvas-title" class="browse-card card">
           <picture class="browse-media card-media">
             <img src="https://images.unsplash.com/photo-1758522275261-4ab586242ce0?q=80&w=1032&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Shared Canvas Workshop - Creative date activity">
           </picture>
@@ -107,10 +106,10 @@
           </p>
           <h3>Shared Canvas Workshop</h3>
           <p>Express your love through paint on a single shared canvas.</p>
-        </article>
+        </article> -->
 
         <!-- Date idea card 3: Vinyl & Vintage Wine -->
-        <article aria-labelledby="vinyl-title" class="browse-card card">
+        <!-- <article aria-labelledby="vinyl-title" class="browse-card card">
           <picture class="browse-media card-media">
             <img src="https://images.unsplash.com/photo-1706586346290-68657e61cfc4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Cozy lounge with vintage wine" alt="Vinyl & Vintage Wine - Cozy romantic date">
           </picture>
@@ -120,11 +119,10 @@
           </p>
           <h3>Vinyl & Vintage Wine</h3>
           <p>Listen to classic records while exploring rare wines.</p>
-        </article>
+        </article> -->
 
         <!-- Second row of date cards -->
-        <article aria-labelledby="sunrise-title" class="browse-card card">
-          <!-- Date idea card 4: Sunrise Over the Valley -->
+        <!-- <article aria-labelledby="sunrise-title" class="browse-card card">
           <picture class="browse-media card-media">
             <img src="https://images.unsplash.com/photo-1637689537827-5cc7980b4c41?q=80&w=867&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunrise Over the Valley - Romantic outdoor adventure">
           </picture>
@@ -134,10 +132,10 @@
           </p>
           <h3>Sunrise Over the Valley</h3>
           <p>A breathtaking hot air balloon ride followed by brunch.</p>
-        </article>
+        </article> -->
 
         <!-- Date idea card 5: Chef's Secret Garden -->
-        <article aria-labelledby="garden-title" class="browse-card card">
+        <!-- <article aria-labelledby="garden-title" class="browse-card card">
           <picture class="browse-media card-media">
             <img src="https://images.unsplash.com/photo-1529175283207-194a414b9ffa?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Chef's Secret Garden - Exclusive dining experience">
           </picture>
@@ -147,10 +145,10 @@
           </p>
           <h3>Chef's Secret Garden</h3>
           <p>An exclusive multi-course farm-to-table dinner.</p>
-        </article>
+        </article> -->
 
           <!-- Date idea card 6: Sunset Coastline Bike Ride -->
-        <article aria-labelledby="bike-title" class="browse-card card">
+        <!-- <article aria-labelledby="bike-title" class="browse-card card">
           <picture class="browse-media card-media">
             <img src="https://images.unsplash.com/photo-1715415041153-c096f365ba44?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sunset Coastline Bike Ride - Active outdoor date">
           </picture>
@@ -160,7 +158,7 @@
           </p>
           <h3>Sunset Coastline Bike Ride</h3>
           <p>Explore hidden coves on a guided evening bike tour.</p>
-        </article>
+        </article> -->
       </section>
     </main>
 
@@ -196,12 +194,27 @@
       </section>
 
       <nav aria-label="Footer" class="footer-nav">
-        <a href="/generate.html">Generate</a>
-        <a href="/my-plans.html">My Plans</a>
-        <a href="/browse.html">Browse</a>
+        <a href="generate.html">Generate</a>
+        <a href="my-plans.html">My Plans</a>
+        <a href="browse.html">Browse</a>
       </nav>
 
       <small>© 2026 DateSpark. All rights reserved.</small>
     </footer>
+
+    <!-- Card details modal -->
+    <div id="idea-modal" class="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <article class="modal-content card">
+        
+        <button id="modal-close" class="modal-close" aria-label="Close dialog">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+        
+        <div id="modal-body"></div>
+        
+      </article>
+    </div>
+
+    <script src="../js/browse.js"></script>
   </body>
 </html>

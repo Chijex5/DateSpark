@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "title": "Starlit Picnic in the Park",
+    "content": "Pack a cozy blanket, some delicious snacks, and a thermos of hot cocoa. Find a quiet spot in the park, lay back, and gaze at the stars together.",
+    "imageUrl": "https://images.unsplash.com/photo-1540321768192-1e4c7a096f4f?q=80&w=654&auto=format&fit=crop",
+    "imageAlt": "Couple having a picnic under the stars",
+    "priceRange": "₦",
+    "category": "Outdoor",
+    "duration": "2-3 hours",
+    "essentials": "Blanket, Snacks, Hot Cocoa",
+    "romanticTip": "Choose a night with clear skies for the best stargazing. Bring a star map app to identify constellations together."
+  },
+  {
+    "id": 2,
+    "title": "Pottery Wheel Workshop",
+    "content": "Get your hands dirty and create something beautiful together. A pottery class is playful, tactile, and gives you a keepsake to remember the day.",
+    "imageUrl": "https://images.unsplash.com/photo-1720176472643-731fc581b10e?q=80&w=870&auto=format&fit=crop",
+    "imageAlt": "Couple working on a shared pottery wheel",
+    "priceRange": "₦₦",
+    "category": "Creative",
+    "duration": "2-3 hours",
+    "essentials": "Comfortable clothes, Open mind",
+    "romanticTip": "Book a private session if possible — having the studio to yourselves makes it much more intimate."
+  },
+  {
+    "id": 3,
+    "title": "Vinyl & Vintage Wine Night",
+    "content": "Listen to classic records while exploring rare wines in a private lounge. Let the music set the mood as you discover new favorites together.",
+    "imageUrl": "https://images.unsplash.com/photo-1706586346290-68657e61cfc4?q=80&w=870&auto=format&fit=crop",
+    "imageAlt": "Cozy lounge with vintage wine and vinyl records",
+    "priceRange": "₦₦₦",
+    "category": "Cozy",
+    "duration": "3-4 hours",
+    "essentials": "Vinyl records, Wine selection, Cozy seating",
+    "romanticTip": "Each pick a record you love and take turns — it's a fun way to share a piece of yourselves."
+  },
+  {
+    "id": 4,
+    "title": "Sunrise Hike",
+    "content": "Set the alarm early and head out to catch the sunrise from a hilltop. Warm drinks in hand, watch the sky change colors as the world wakes up around you.",
+    "imageUrl": "https://images.unsplash.com/photo-1628153016415-f913d0cf3e07?q=80&w=870&auto=format&fit=crop",
+    "imageAlt": "Couple watching a golden sunrise from a hilltop",
+    "priceRange": "₦",
+    "category": "Outdoor",
+    "duration": "2-4 hours",
+    "essentials": "Good shoes, Warm layers, Flask of coffee",
+    "romanticTip": "Check the sunrise time the night before and arrive 20 minutes early to get settled in the best spot."
+  },
+  {
+    "id": 5,
+    "title": "Shared Canvas Workshop",
+    "content": "Paint one canvas together — no experience needed. Split the canvas down the middle and create your halves, then reveal them at the end.",
+    "imageUrl": "https://images.unsplash.com/photo-1512740452972-baac55d40ef1?q=80&w=388&auto=format&fit=crop",
+    "imageAlt": "Two people painting on a shared canvas",
+    "priceRange": "₦₦",
+    "category": "Creative",
+    "duration": "2-3 hours",
+    "essentials": "Canvas, Acrylic paints, Aprons",
+    "romanticTip": "Frame the finished canvas together — it becomes a piece of art that's uniquely yours."
+  },
+  {
+    "id": 6,
+    "title": "Sunset Coastline Bike Ride",
+    "content": "Rent bikes and cruise along the coastline as the sun dips below the horizon. Stop at hidden coves, take photos, and let the sea breeze do the rest.",
+    "imageUrl": "https://images.unsplash.com/photo-1715415041153-c096f365ba44?q=80&w=387&auto=format&fit=crop",
+    "imageAlt": "Couple cycling along a coastline at sunset",
+    "priceRange": "₦",
+    "category": "Active",
+    "duration": "1-2 hours",
+    "essentials": "Bikes, Helmets, Water bottles",
+    "romanticTip": "Pack a small snack and stop somewhere scenic to eat — the pause makes the ride feel like an adventure."
+  },
+  {
+    "id": 7,
+    "title": "Chef's Secret Garden Dinner",
+    "content": "An exclusive multi-course farm-to-table dinner in a private garden setting. Every dish tells a story rooted in local ingredients and seasonal flavors.",
+    "imageUrl": "https://images.unsplash.com/photo-1529175283207-194a414b9ffa?q=80&w=870&auto=format&fit=crop",
+    "imageAlt": "Elegant outdoor garden dinner table setting",
+    "priceRange": "₦₦₦₦",
+    "category": "Foodie",
+    "duration": "3-4 hours",
+    "essentials": "Smart casual attire, Reservation",
+    "romanticTip": "Tell the chef it's a special occasion — most will add a personal touch to the experience."
+  },
+  {
+    "id": 8,
+    "title": "Moonlight Stroll & Cocoa",
+    "content": "A gentle walk through the city or a quiet neighbourhood after dark, ending at a cosy café for rich hot chocolate. Simple, unhurried, and deeply romantic.",
+    "imageUrl": "https://images.unsplash.com/photo-1531789965484-b656c2777ae2?q=80&w=870&auto=format&fit=crop",
+    "imageAlt": "Couple walking hand in hand at night",
+    "priceRange": "₦",
+    "category": "Romantic",
+    "duration": "1-2 hours",
+    "essentials": "Comfortable shoes, Warm jacket",
+    "romanticTip": "Leave your destination open-ended — let the walk take you somewhere unexpected."
+  }
+]

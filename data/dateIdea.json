@@ -1,0 +1,11 @@
+[{
+    "id": 1,
+    "title": "Starlit Picnic in the Park",
+    "content": "Pack a cozy blanket, some delicious snacks, and a thermos of hot cocoa. Find a quiet spot in the park, lay back, and gaze at the stars together. It's a romantic and intimate way to spend an evening under the night sky.",
+    "imageUrl": "https://images.unsplash.com/photo-1540321768192-1e4c7a096f4f?q=80&w=654&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "priceRange": "$$",
+    "category": "Outdoor",
+    "duration": "2-3 hours",
+    "essentials": "Blanket, Snacks, Hot Cocoa",
+    "romanticTip": "Choose a night with clear skies for the best stargazing experience. Bring a star map or use a stargazing app to identify constellations together."
+}]

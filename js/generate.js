@@ -457,6 +457,22 @@ function getSavedIdeas() {
   }
 }
 
+function isSameIdea(savedIdea, idea) {
+  if (!savedIdea || !idea) return false;
+
+  const savedId = savedIdea.id;
+  const currentId = idea.id;
+  if (savedId !== undefined && savedId !== null && currentId !== undefined && currentId !== null) {
+    if (String(savedId) === String(currentId)) {
+      return true;
+    }
+  }
+
+  const savedTitle = String(savedIdea.title || "").trim().toLowerCase();
+  const currentTitle = String(idea.title || "").trim().toLowerCase();
+  return Boolean(savedTitle) && savedTitle === currentTitle;
+}
+
 function flashSaveButton(label) {
   if (!savePlanBtn) return;
 
@@ -477,7 +493,7 @@ function saveCurrentIdea() {
   }
 
   const savedIdeas = getSavedIdeas();
-  const alreadySaved = savedIdeas.some((idea) => idea.id === currentIdea.id);
+  const alreadySaved = savedIdeas.some((idea) => isSameIdea(idea, currentIdea));
 
   if (alreadySaved) {
     flashSaveButton("Already Saved");

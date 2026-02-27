@@ -18,6 +18,7 @@ const tryAnotherBtn = document.getElementById("try-another-btn");
 const inspirationIdeas = document.getElementById("inspiration-ideas");
 
 const STORAGE_KEY = "datespark.savedPlans.v1";
+const IDEA_QUERY_PARAM = "idea";
 
 const budgetAliases = {
   low: ["Free", "₦"],
@@ -28,7 +29,9 @@ const budgetAliases = {
 const activityAliases = {
   outdoor: ["Outdoor", "Active"],
   cozy: ["Cozy", "Romantic"],
-  indoor: ["Cozy", "Creative", "Foodie", "Romantic"],
+  foodie: ["Foodie"],
+  creative: ["Creative"],
+  romantic: ["Romantic"]
 };
 
 const filterLabel = {
@@ -45,10 +48,187 @@ let activeFilters = {
   activity: "",
   duration: "",
 };
+let inspirationModalOverlay = null;
+let inspirationModalBody = null;
+let inspirationModalClose = null;
+let lastFocusedElement = null;
 
 function setStatus(message) {
   if (!statusText) return;
   statusText.textContent = message || "";
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
+function getIdeaById(ideaId) {
+  return allDateIdeas.find((idea) => String(idea.id) === String(ideaId)) || null;
+}
+
+function getIdeaIdFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get(IDEA_QUERY_PARAM);
+}
+
+function updateIdeaQuery(ideaId) {
+  const params = new URLSearchParams(window.location.search);
+
+  if (ideaId === null || ideaId === undefined || ideaId === "") {
+    params.delete(IDEA_QUERY_PARAM);
+  } else {
+    params.set(IDEA_QUERY_PARAM, String(ideaId));
+  }
+
+  const queryString = params.toString();
+  const nextUrl = `${window.location.pathname}${queryString ? `?${queryString}` : ""}${window.location.hash}`;
+  window.history.replaceState({}, "", nextUrl);
+}
+
+function ensureInspirationModal() {
+  inspirationModalOverlay = document.getElementById("generate-idea-modal");
+
+  if (!inspirationModalOverlay) {
+    const modalNode = document.createElement("div");
+    modalNode.id = "generate-idea-modal";
+    modalNode.className = "modal-overlay";
+    modalNode.setAttribute("aria-hidden", "true");
+    modalNode.setAttribute("role", "dialog");
+    modalNode.setAttribute("aria-modal", "true");
+    modalNode.setAttribute("aria-labelledby", "generate-modal-title");
+    modalNode.innerHTML = `
+      <article class="modal-content card">
+        <button id="generate-modal-close" class="modal-close" aria-label="Close dialog">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 6 6 18"/>
+            <path d="m6 6 12 12"/>
+          </svg>
+        </button>
+        <div id="generate-modal-body"></div>
+      </article>
+    `;
+
+    document.body.appendChild(modalNode);
+    inspirationModalOverlay = modalNode;
+  }
+
+  inspirationModalBody = document.getElementById("generate-modal-body");
+  inspirationModalClose = document.getElementById("generate-modal-close");
+
+  if (!inspirationModalOverlay || !inspirationModalBody || !inspirationModalClose) {
+    console.error("Generate inspiration modal hooks are missing.");
+    return false;
+  }
+
+  if (inspirationModalOverlay.dataset.bound !== "true") {
+    inspirationModalClose.addEventListener("click", () => {
+      closeInspirationModal();
+    });
+
+    inspirationModalOverlay.addEventListener("click", (event) => {
+      if (event.target === inspirationModalOverlay) {
+        closeInspirationModal();
+      }
+    });
+
+    inspirationModalOverlay.dataset.bound = "true";
+  }
+
+  return true;
+}
+
+function openInspirationModal(ideaId, options = {}) {
+  const { updateQuery = true } = options;
+  const selectedIdea = getIdeaById(ideaId);
+  if (!selectedIdea) return;
+  if (!ensureInspirationModal()) return;
+
+  const escapedTitle = escapeHtml(selectedIdea.title);
+  const escapedContent = escapeHtml(selectedIdea.content);
+  const escapedImageUrl = escapeHtml(selectedIdea.imageUrl);
+  const escapedImageAlt = escapeHtml(selectedIdea.imageAlt);
+  const escapedCategory = escapeHtml(selectedIdea.category);
+  const escapedPriceRange = escapeHtml(selectedIdea.priceRange);
+  const escapedDuration = escapeHtml(selectedIdea.duration);
+  const escapedEssentials = escapeHtml(selectedIdea.essentials || "None listed");
+  const escapedTip = escapeHtml(selectedIdea.romanticTip || "No tip available yet.");
+
+  inspirationModalBody.innerHTML = `
+    <figure style="margin: 0;">
+      <img src="${escapedImageUrl}" alt="${escapedImageAlt}" class="modal-hero">
+    </figure>
+    
+    <div class="modal-details">
+      <header>
+        <div class="modal-tags">
+          <span>${escapedCategory}</span>
+          <span>${escapedPriceRange}</span>
+        </div>
+        <h2 id="generate-modal-title">${escapedTitle}</h2>
+      </header>
+      
+      <p>${escapedContent}</p>
+      
+      <section class="modal-meta" aria-label="Date Details">
+        <p><strong>Duration:</strong> ${escapedDuration}</p>
+        <p><strong>Essentials:</strong> ${escapedEssentials}</p>
+      </section>
+      
+      <aside class="romantic-tip" aria-label="Romantic Tip">
+        <p><strong>Tip:</strong> ${escapedTip}</p>
+      </aside>
+    </div>
+  `;
+
+  lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  inspirationModalOverlay.classList.add("active");
+  inspirationModalOverlay.setAttribute("aria-hidden", "false");
+  inspirationModalOverlay.dataset.ideaId = String(selectedIdea.id);
+  document.body.classList.add("modal-open");
+
+  if (updateQuery) {
+    updateIdeaQuery(selectedIdea.id);
+  }
+}
+
+function closeInspirationModal(options = {}) {
+  const { updateQuery = true } = options;
+  if (updateQuery) {
+    updateIdeaQuery(null);
+  }
+
+  if (!inspirationModalOverlay || !inspirationModalOverlay.classList.contains("active")) {
+    return;
+  }
+
+  inspirationModalOverlay.classList.remove("active");
+  inspirationModalOverlay.setAttribute("aria-hidden", "true");
+  inspirationModalOverlay.removeAttribute("data-idea-id");
+  document.body.classList.remove("modal-open");
+
+  if (lastFocusedElement && document.body.contains(lastFocusedElement)) {
+    lastFocusedElement.focus();
+  }
+
+  lastFocusedElement = null;
+}
+
+function openIdeaFromQuery() {
+  const queriedIdeaId = getIdeaIdFromQuery();
+  if (!queriedIdeaId) return;
+
+  const selectedIdea = getIdeaById(queriedIdeaId);
+  if (!selectedIdea) {
+    updateIdeaQuery(null);
+    return;
+  }
+
+  openInspirationModal(selectedIdea.id, { updateQuery: false });
 }
 
 function getDurationBucket(durationText) {
@@ -214,18 +394,18 @@ function buildInspirationCards(ideas) {
   return ideas
     .map(
       (item) => `
-      <article aria-label="${item.title} idea">
+      <article aria-label="${escapeHtml(item.title)} idea">
         <figure>
-          <img src="${item.imageUrl}" alt="${item.imageAlt}" width="400" height="280" loading="lazy" />
+          <img src="${escapeHtml(item.imageUrl)}" alt="${escapeHtml(item.imageAlt)}" width="400" height="280" loading="lazy" />
         </figure>
 
         <p aria-label="Idea categories">
-          <span>${item.category}</span>
-          <span>${item.priceRange}</span>
+          <span>${escapeHtml(item.category)}</span>
+          <span>${escapeHtml(item.priceRange)}</span>
         </p>
 
-        <h3>${item.title}</h3>
-        <a href="browse.html">View Details</a>
+        <h3>${escapeHtml(item.title)}</h3>
+        <a href="browse.html?idea=${encodeURIComponent(item.id)}" data-action="view-details" data-id="${escapeHtml(item.id)}">View Details</a>
       </article>
     `
     )
@@ -391,6 +571,23 @@ function attachEventListeners() {
 
   tryAnotherBtn.addEventListener("click", tryAnotherIdea);
   savePlanBtn.addEventListener("click", saveCurrentIdea);
+
+  inspirationIdeas?.addEventListener("click", (event) => {
+    const detailsLink = event.target.closest('a[data-action="view-details"][data-id]');
+    if (!detailsLink) return;
+
+    event.preventDefault();
+    const ideaId = detailsLink.getAttribute("data-id");
+    if (!ideaId) return;
+
+    openInspirationModal(ideaId);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && inspirationModalOverlay?.classList.contains("active")) {
+      closeInspirationModal();
+    }
+  });
 }
 
 function initializeGenerator() {
@@ -413,6 +610,7 @@ function initializeGenerator() {
   }
 
   attachEventListeners();
+  ensureInspirationModal();
 
   fetch("../data/dateIdeas.json")
     .then((res) => res.json())
@@ -429,6 +627,7 @@ function initializeGenerator() {
 
       renderFeaturedIdea(currentIdea);
       renderInspirationIdeas(currentIdea);
+      openIdeaFromQuery();
       setStatus("");
     })
     .catch((err) => {

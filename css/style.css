@@ -1194,14 +1194,38 @@ body.modal-open {
   position: absolute;
   top: var(--space-4);
   right: var(--space-4);
-  border: none;
-  background: var(--color-bg-white);
+  border: var(--border-1) solid var(--overlay-brand-700-12);
+  background: var(--overlay-white-85);
   border-radius: var(--radius-full);
-  width: var(--space-8);
-  height: var(--space-8);
-  display: grid;
-  place-items: center;
+  padding: var(--space-1-2) var(--space-3-2);
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-brand-700);
+  font-size: var(--text-size-xs);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-tight);
+  transition: transform var(--duration-fast) var(--easing-standard),
+              background var(--duration-fast) var(--easing-standard),
+              border-color var(--duration-fast) var(--easing-standard);
   box-shadow: var(--shadow-card);
+}
+
+.plans-page .plan-remove:hover {
+  transform: translateY(var(--size-lift-sm));
+  background: var(--color-brand-50);
+  border-color: var(--overlay-brand-700-25);
+}
+
+.plans-page .plan-remove:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+.plans-page .plan-remove svg {
+  width: 14px;
+  height: 14px;
 }
 
 .plans-page .plan-title {
@@ -1237,9 +1261,15 @@ body.modal-open {
 .plans-page .plan-link {
   padding: var(--space-2-4) var(--space-5-6);
   border-radius: var(--radius-full);
+  border: none;
   background: var(--color-brand-600);
   color: var(--color-white);
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--duration-fast) var(--easing-standard),
+              box-shadow var(--duration-fast) var(--easing-standard);
   box-shadow: var(--shadow-plan-button);
 }
 
@@ -1250,6 +1280,48 @@ body.modal-open {
   background: var(--color-rose-25);
   color: var(--color-brand-700);
   font-weight: 600;
+  transition: transform var(--duration-fast) var(--easing-standard),
+              border-color var(--duration-fast) var(--easing-standard);
+}
+
+.plans-page .plan-link:hover,
+.plans-page .plan-done:hover {
+  transform: translateY(var(--size-lift-sm));
+}
+
+.plans-page .plan-done:hover {
+  border-color: var(--overlay-brand-700-20);
+}
+
+.plans-page .plan-details-modal-content {
+  max-width: 600px;
+}
+
+.plans-page .plan-status-badge {
+  margin: 0;
+  display: inline-flex;
+  width: fit-content;
+  border-radius: var(--radius-full);
+  padding: var(--space-1-2) var(--space-3);
+  font-size: var(--text-size-xs);
+  font-weight: 700;
+  letter-spacing: var(--letter-spacing-sm);
+  text-transform: uppercase;
+}
+
+.plans-page .plan-status-upcoming {
+  background: var(--overlay-brand-500-12);
+  color: var(--color-brand-700);
+}
+
+.plans-page .plan-status-done {
+  background: var(--overlay-brand-700-12);
+  color: var(--color-brand-900);
+}
+
+.plans-page .plan-details-meta {
+  display: grid;
+  gap: var(--space-2);
 }
 
 .home-hero {
@@ -1924,22 +1996,25 @@ body.modal-open {
     font-size: var(--text-size-sm);
   }
 
-  .plan-actions {
+  .plans-page .plan-actions {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .plan-link, 
-  .plan-done {
+  .plans-page .plan-link, 
+  .plans-page .plan-done {
     width: 100%;
     text-align: center;
   }
   
-  .plan-remove {
-    width: var(--space-6);
-    height: var(--space-6);
+  .plans-page .plan-remove {
     top: var(--space-3);
     right: var(--space-3);
+    padding: var(--space-1-2) var(--space-2-8);
+  }
+
+  .plans-page .plan-remove span {
+    display: none;
   }
 
   /* generate page */

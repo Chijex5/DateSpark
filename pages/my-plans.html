@@ -68,17 +68,17 @@
       <!-- Controls row: tabs + search -->
       <section aria-label="Plans controls" class="plans-controls">
         <!-- Tabs (semantic buttons) -->
-        <nav aria-label="Plan status" class="plans-tabs">
-          <button type="button" aria-current="page" class="plans-tab-active">
-            Upcoming <span aria-label="3 upcoming plans">(3)</span>
+        <nav id="plans-tabs" aria-label="Plan status" class="plans-tabs">
+          <button id="tab-upcoming" data-tab="upcoming" type="button" aria-current="page" class="plans-tab-active">
+            Upcoming <span id="upcoming-count" aria-label="3 upcoming plans">(3)</span>
           </button>
-          <button type="button">
-            Completed <span aria-label="1 completed plan">(1)</span>
+          <button id="tab-completed" data-tab="completed" type="button">
+            Completed <span id="completed-count" aria-label="1 completed plan">(1)</span>
           </button>
         </nav>
 
         <!-- Search -->
-        <form aria-label="Search plans" role="search" class="plans-search">
+        <form id="plans-search-form" aria-label="Search plans" role="search" class="plans-search">
           <label for="plan-search" class="sr-only">Find a specific plan</label>
           <input
             id="plan-search"
@@ -90,8 +90,10 @@
         </form>
       </section>
 
+      <p id="plans-status" aria-live="polite"></p>
+
       <!-- Plans grid -->
-      <section aria-label="Upcoming plans" class="plans-grid">
+      <section id="plans-grid" aria-label="Upcoming plans" class="plans-grid">
         <!-- Card 1 -->
         <article aria-labelledby="plan-1-title" class="plan-card card">
           <figure class="plan-media card-media">
@@ -238,5 +240,7 @@
 
       <small>© 2026 DateSpark. All rights reserved.</small>
     </footer>
+
+    <script src="../js/my-plans.js"></script>
   </body>
 </html>

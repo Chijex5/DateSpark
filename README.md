@@ -4,7 +4,6 @@
 
 **Live Site URL:** https://date-spark-lovat.vercel.app/
 
-**Presentation Link:** 
 
 ---
 

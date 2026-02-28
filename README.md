@@ -21,6 +21,7 @@ DateSpark solves date planning fatigue by providing instant and personalized dat
 
 DateSpark uses a comprehensive CSS custom properties system for maintainable and consistent styling across all pages.
 
+
 ### Typography
 **Playfair Display** (serif) for headings and **Inter** (sans-serif) for body text. Responsive sizing with fluid hero text scaling between 2.2rem–3.2rem.
 
@@ -58,3 +59,8 @@ Layered radial gradients create romantic atmospheres. Pages use dual gradients o
 
 ---
 
+## Presentation Link
+
+https://www.canva.com/design/DAHAn2E5g7o/l_aOI_8w6wRweTjWwSPpKg/edit?utm_content=DAHAn2E5g7o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+---

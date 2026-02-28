@@ -59,7 +59,7 @@ Layered radial gradients create romantic atmospheres. Pages use dual gradients o
 
 ---
 
-## Presentation Link
+## Powerpoint slide
 
 https://www.canva.com/design/DAHAn2E5g7o/l_aOI_8w6wRweTjWwSPpKg/edit?utm_content=DAHAn2E5g7o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 

@@ -1659,6 +1659,29 @@ body.modal-open {
   color: var(--overlay-white-65);
 }
 
+/* Form Feedback Messages */
+.form-message {
+  font-size: 0.875rem;
+  margin-top: 0.75rem;
+  font-weight: 500;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-message {
+  color: #ff6b6b; 
+}
+
+.success-message {
+  color: #2ecc71; 
+}
+
+/* Optional: Smooth fade-in effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 /* Footer */
 .site-footer {
   margin-top: var(--space-16);

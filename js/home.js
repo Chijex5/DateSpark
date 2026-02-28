@@ -2,6 +2,10 @@ const track = document.getElementById("experience");
 const prevBtn = document.querySelector('[aria-label="Previous experiences"]');
 const nextBtn = document.querySelector('[aria-label="Next experiences"]');
 
+const subscribeForm = document.querySelector('.subscribe-form');
+const emailInput = document.getElementById('email');
+const submitButton = document.querySelector('.subscribe-button');
+
 // Build one card from a JSON item
 function createCard(item) {
   return `
@@ -28,7 +32,6 @@ fetch("../data/dateIdeas.json")
   })
   .catch((err) => {
     console.error("Could not load experiences:", err);
-    // Static cards in the HTML remain as fallback
     initCarousel();
   });
 
@@ -88,4 +91,55 @@ function initCarousel() {
   });
 
   updateButtons();
+}
+
+if (subscribeForm) {
+  subscribeForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const emailValue = emailInput.value.trim();
+    clearMessage();
+
+    if (!emailValue) {
+      showMessage('Please enter an email address.', 'error');
+      return;
+    }
+
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(emailValue)) {
+      showMessage('Please enter a valid email address.', 'error');
+      return;
+    }
+
+    submitButton.textContent = 'Subscribing...';
+    submitButton.disabled = true;
+
+    setTimeout(() => {
+      showMessage('Thanks for subscribing! Check your inbox soon.', 'success');
+      subscribeForm.reset(); 
+      
+      submitButton.textContent = 'Subscribe';
+      submitButton.disabled = false;
+    }, 1500); 
+  });
+}
+
+// Helper function to display feedback messages
+function showMessage(text, type) {
+  const msgEl = document.createElement('p');
+  // Assigning classes instead of inline styles
+  msgEl.className = `form-message ${type}-message`;
+  msgEl.textContent = text;
+  
+  subscribeForm.appendChild(msgEl);
+  setTimeout(clearMessage, 4000);
+}
+
+// Helper function to remove existing messages
+function clearMessage() {
+  const existingMsg = subscribeForm.querySelector('.form-message');
+  if (existingMsg) {
+    existingMsg.remove();
+  }
 }

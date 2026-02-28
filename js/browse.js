@@ -128,7 +128,7 @@ function closeModal() {
   document.body.classList.remove("modal-open");
 }
 
-// Event Listeners for Opening Modal
+// Event listeners for opening the modal
 grid.addEventListener("click", (e) => {
   const card = e.target.closest(".browse-card");
   if (card) {
@@ -140,7 +140,7 @@ grid.addEventListener("click", (e) => {
   }
 });
 
-// Allows opening of cards with the Enter key for accessibility
+// Allows opening of cards with the enter key for accessibility
 grid.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
     const card = e.target.closest(".browse-card");

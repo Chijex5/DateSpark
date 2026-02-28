@@ -8,6 +8,15 @@ const modalClose = document.getElementById("modal-close");
 
 let allDateIdeas = [];
 
+function getIdeaIdFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  const rawId = params.get("idea");
+  if (!rawId) return null;
+
+  const parsedId = parseInt(rawId, 10);
+  return Number.isNaN(parsedId) ? null : parsedId;
+}
+
 // Render the grid cards
 function renderCards(ideas) {
   const titleHtml = `<h2 class="browse-grid-title" id="curated-title">Curated Date Experiences</h2>`;
@@ -40,6 +49,7 @@ fetch("../data/dateIdeas.json")
   .then((data) => {
     allDateIdeas = data;
     renderCards(allDateIdeas);
+    openIdeaFromQuery();
   })
   .catch((err) => console.error("Failed to load date ideas:", err));
 
@@ -93,6 +103,24 @@ function openModal(idea) {
   // Show the modal and lock the background scroll
   modalOverlay.classList.add("active");
   document.body.classList.add("modal-open");
+}
+
+function openIdeaFromQuery() {
+  const ideaId = getIdeaIdFromQuery();
+  if (!ideaId) return;
+
+  const selectedIdea = allDateIdeas.find((idea) => idea.id === ideaId);
+  if (!selectedIdea) {
+    console.warn(`Idea id ${ideaId} not found in browse data.`);
+    return;
+  }
+
+  openModal(selectedIdea);
+
+  const matchingCard = grid.querySelector(`.browse-card[data-id="${ideaId}"]`);
+  if (matchingCard) {
+    matchingCard.focus();
+  }
 }
 
 function closeModal() {

@@ -4,6 +4,8 @@
 
 **Live Site URL:** https://date-spark-lovat.vercel.app/
 
+**Presentation Link:** 
+
 ---
 
 ## Case Study Summary
@@ -41,6 +43,38 @@ Component-specific: `--shadow-card` for standard cards, `--shadow-primary-btn` f
 
 ### Backgrounds
 Layered radial gradients create romantic atmospheres. Pages use dual gradients over rose bases, hero sections overlay white gradients on images.
+
+---
+
+## JavaScript Implementation & Logic Flow
+
+DateSpark uses vanilla JavaScript to handle state, data fetching, and DOM manipulation. The application relies on a local JSON file (`dateIdeas.json`) as a read-only database and utilizes the browser's `localStorage` to persist user-specific data.
+
+### 1. Generate Flow (`generate.js`)
+The core feature of the app dynamically filters and selects date ideas based on user input.
+* **Data Fetching:** On page load, the app fetches `dateIdeas.json` and stores it in memory.
+* **User Input & Filtering:** When the user submits the form, JS reads the `budget`, `activity`, and `duration` preferences. It maps these inputs to data aliases (e.g., mapping a "low" budget to "Free" and "₦").
+* **Resolution Logic:** The JS filters the array of ideas. If no exact match is found, the system implements a "relaxation" fallback, systematically ignoring filters (first duration, then activity, then budget) until a pool of viable ideas is found, ensuring the user never hits a dead end.
+* **Selection & Rendering:** A random idea is picked from the resolved pool and injected into the DOM. Additional random ideas are shuffled and rendered as "inspiration cards."
+* **Persistence:** Clicking "Save to My Plans" packages the current idea into an object with a timestamp and pushes it to `localStorage`.
+
+### 2. My Plans Flow (`my-plans.js`)
+This page acts as the user's personal dashboard and it manages saved states.
+* **Data Retrieval:** On initialization, JS parses the `datespark.savedPlans.v1` array from `localStorage`. 
+* **State Management:** The data is split into "Upcoming" and "Completed" views based on an `isCompleted` boolean property.
+* **User Interactions:** * **Search:** Typing in the search bar dynamically filters the displayed grid by matching the input string against titles, content, and tags.
+    * **Toggle/Remove:** Clicking "Mark Completed" or "Remove" mutates the specific object within the array, overwrites `localStorage` with the updated array, and immediately re-renders the DOM to reflect the new state.
+
+### 3. Browse Flow (`browse.js`)
+Provides a categorized library of all available experiences.
+* **Initialization:** Fetches the JSON data and renders the entire list as a grid of cards.
+* **Filtering:** Clicking category buttons filters the array by the `category` string and updates the DOM grid.
+* **Modal & Deep Linking:** Clicking an idea opens a dynamically populated modal. The app actively updates the URL parameter (`?idea=ID`) when a modal is opened, allowing users to share direct links to specific date ideas.
+
+### 4. Home Page Flow (`home.js`)
+Handles landing page interactivity.
+* **Carousel:** Fetches the JSON data to populate the "Curated Experiences" track, implementing custom drag-to-scroll and button-click horizontal scrolling logic.
+* **Form Validation:** Intercepts the newsletter subscription submission, runs a strict Regular Expression check on the email format, simulates a network delay, and toggles DOM text to display success/error states without page reloads.
 
 ---
 
